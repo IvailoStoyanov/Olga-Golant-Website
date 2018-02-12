@@ -1,0 +1,1684 @@
+/*Resets*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr {
+    margin: 0;
+}
+
+li {
+//    list-style: none;
+}
+
+//Variables
+$break-to-tablet: 426px;
+$break-to-desktop: 770px;
+$black: #212121;
+$pure-black: #000;
+$dirty-white: #fafafa;
+$shadow:rgba(0, 0, 0, .15);
+$black-tint: rgba(33, 33, 33, 0.85);
+$red: #FF0022;
+//ANIMATIONs
+@keyframes appear-left {
+  from {
+    transform: translate(-50px);
+      opacity: 0;
+  }
+  to {
+    transform: translate(0px);
+      opacity: 1;
+  } 
+        }
+@keyframes appear-bottom {
+  from {
+    transform: translate(0px, -100px);
+      opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+      opacity: 1;
+  } 
+        }
+//Fonts
+$main:'Open Sans',
+sans-serif;
+$accent:'Montserrat',
+sans-serif;
+//Fonts applyed
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $accent; 
+}
+
+body {
+    font-family: $main;
+}
+
+//Simple Global Decorations
+//Line lenght
+p {
+    line-height: 1.58;
+    font-size: 18px;
+    @media screen and (min-width: $break-to-tablet) {
+        max-width: 700px;
+    }
+}
+
+//Hyperlink text uderlining
+a {
+    text-decoration-skip: ink;
+    color: $red;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+//Skip links
+
+.skip {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden; 
+}
+ 
+a.skip:active,
+a.skip:focus,
+a.skip:hover {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible; 
+}
+
+//-------------------------------------------------------------------Navigation------------------------------------------------------------------
+nav {
+    position: fixed;
+    z-index: 3;
+    font-family: $accent;
+    font-weight: bold; 
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    ul {
+        margin: 0;
+        padding: 0 8px;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        
+        @media screen and (min-width: $break-to-tablet) {
+            width: 70%;
+            margin: 0 auto;
+
+        }
+
+        li {
+            padding: 15px 0.35rem;
+            transition: 0.3s ease-in-out;
+            border-bottom: 3px solid transparent;
+
+            
+            @media screen and (min-width: $break-to-tablet) {
+                padding: 30px 7px;
+                &:hover {
+                border-bottom: 3px solid #fff;
+                padding: 35px 7px 10px 7px;
+            }
+                &:first-of-type:hover{
+                    border-bottom: 0;
+            }
+            }
+        }
+
+        a {
+            padding: 15px 0;
+            color: #fff;
+            text-decoration: none;
+            @media screen and (min-width: $break-to-tablet) {
+                padding: 30px 0;
+            }
+        }
+    }
+
+}
+//Navigation on scroll background change class
+.scrolled{
+        background: $black-tint;
+    }
+
+.logo {
+    letter-spacing: 1.5px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+//------------------------------------------------------------------Header--------------------------------------------------------------------------
+.page-header {
+    padding: 40vh 0 0 0;
+    height: 55vh;
+    color: #fff;
+}
+
+//Header general rool to style background
+header {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),url(../images/hero-image-test.jpg);
+//    Photo by Sergey Zolkin on Unsplash
+    background-size: cover;
+    background-position: center;
+}
+
+//    Header-home
+.page-header__content--home {
+    margin: 0 20px;
+
+   
+    h1 {
+        margin-bottom: 5px;
+        font-size: 2.8rem;
+        position: relative;
+//        Animate in from left
+        animation:appear-left 1.3s ease .5s;
+        animation-fill-mode: forwards; 
+        opacity: 0; 
+         
+            
+    }
+    @media screen and (min-width: $break-to-tablet) {
+        max-width: 390px;
+        margin: 0 calc(15% + 4px);
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (min-width: $break-to-desktop) {
+        max-width: 600px;
+        h1 {
+            font-size: 6rem;
+        }
+    }
+
+}
+
+.page-header__role {
+    margin-bottom: 40px;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation:appear-left 1.3s ease 1.3s;
+    animation-fill-mode: forwards; 
+    opacity: 0;
+    @media screen and (min-width: $break-to-tablet) {
+        font-size: 1.5rem;
+        margin-bottom: 70px;
+    }
+}
+
+//    Header-work    
+.page-header__content--work {
+    padding: 15vh 20px 10vh 20px;
+//    text-align: center;
+    height: auto;
+    background: $black;
+    @media screen and (min-width: $break-to-tablet) {
+        padding: 15vh 0 10vh calc(15% + 4px);
+    }
+}
+
+.page-header__content--project {
+    padding: 25vh 20px;
+    text-shadow: 1px 1px $black;
+    height: auto;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+    p {
+        padding-bottom: 20px;    
+    }
+
+    @media screen and (min-width: $break-to-tablet) {
+        padding: 20vh 0 0 15%;
+        height: 30vh;
+    }
+    @media screen and (min-width: $break-to-desktop) {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+.page-header__content--project {
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.page-header__content--project.business{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/medium-opt/89-medium.jpg);
+}
+.page-header__content--project.sports{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/medium-opt/2-medium.jpg);
+}
+.page-header__content--project.residential{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/medium-opt/78-medium.jpg);
+}
+
+
+.page-header__button {
+    padding: 10px 15px;
+    margin-top: 20px; 
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: $accent;
+    font-weight: bold; 
+    position: relative;
+    transition: 0.4s ease-in-out;
+    z-index: 2;
+    &:hover {
+        color: $black;
+        background: transparent;
+    }
+    animation:appear-bottom 1.3s ease 2s;
+        animation-fill-mode: forwards; 
+        opacity: 0;
+}
+
+.page-header__button:hover:before {
+    left: 0%;
+    right: auto;
+    width: 100%;
+}
+
+.page-header__button:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: $black;
+    background: #fff;
+    transition: 0.4s ease-in-out;
+}
+
+//-------------------------------------------------------Home page styling-------------------------------------------------------------
+//Home page Projects Section------------------
+.projects {
+    position: relative;
+}
+
+//Home projects grid
+.home-projects-container {
+    display: grid;
+    grid-template-rows: 48vh 48vh 48vh;
+}
+
+.home-projects-container__item {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-color: #333;
+    
+    @media screen and (min-width: $break-to-desktop) {
+        background-size: 100%;
+        transition: 7s linear;
+        &:hover {
+            background-size: 130%;
+            .home-projects-container__button{
+                 background: #fff;
+                 color: $black;
+                
+            }
+        }
+    }
+
+    &.home-projects-container__item--item1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/low-opt/87-low.jpg);
+        @media screen and (min-width: $break-to-desktop) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/hotel/medium-opt/87-medium.jpg); 
+        }
+    }
+
+    &.home-projects-container__item--item2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/low-opt/78-low.jpg);
+        @media screen and (min-width: $break-to-desktop) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/residential/medium-opt/78-medium.jpg);
+        }
+    }
+
+    &.home-projects-container__item--item3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/low-opt/2-low.jpg);
+        @media screen and (min-width: $break-to-desktop) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/sport/medium-opt/2-medium.jpg);
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        padding: 10px 0px;
+        @media screen and (min-width: $break-to-tablet) {
+            font-size: 25px;
+        }
+    }
+    .home-projects-container__text {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        h4{
+        padding-bottom: 30px;
+            }
+        @media screen and (min-width:$break-to-tablet){
+            left: 15%;
+            bottom: 80px;
+            h4{
+                font-size: 30px;
+            }
+        }
+
+    }
+}
+//home-projects-container__button
+.home-projects-container__button{
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    transition: 0.2s ease-in-out;
+}
+
+//About Me Home Page--------------------
+.text-section {
+    padding: 20vh 20px;
+    font-size: 21px;
+    background: $black;
+    color: #fff;
+    p {
+        margin: 0 auto;
+        color: $dirty-white;
+    }
+
+    h2 {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    @media screen and (min-width:$break-to-tablet){
+        padding: 20vh 0;
+        p{
+            margin: 0 calc(15% + 4px);
+        }
+        h2{
+            margin: 0 calc(15% + 4px);
+        }
+    }
+}
+
+//------------------------------------------------------------------Work page styling----------------------------------------------------------------
+//Work project heading-----------------
+.work-project-heading {
+    background: #fff;
+    color: $black;
+    box-shadow: inset 0px 7px 9px -6px $pure-black;
+    text-align: center;
+    padding: 75px 0 10px 0;
+    @media screen and (min-width: $break-to-desktop) {
+        padding: 200px 0 10px 0;
+        text-align: left;
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+
+}
+
+//Work project grid
+.work-grid-container {
+    background: #fff;
+    display: grid; 
+    grid-template-rows: 250px 250px auto 250px 250px;
+
+    @media screen and (min-width: $break-to-tablet) {
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        padding: 20px;
+    }
+    @media screen and (min-width: $break-to-desktop) {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 70%;
+        margin: 0 auto;
+        padding: 20px 0 100px 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.work-grid-container__item {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: 0.1s ease-in-out;
+    &:hover {
+        box-shadow: 0px 2px 10px $black;
+        transform: scale(1.01);
+    }
+
+    .work-grid-container__cta {
+        font-family: $accent;
+        border-bottom: 2px solid #fff;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        letter-spacing: 3px; 
+        transform: rotate(90deg);
+        color: #fff;
+        padding: 0px 5px 0 7px;
+    }
+
+}
+
+//Break-to-tablet work projects grid adjustments
+@media screen and (min-width:$break-to-tablet) {
+    //    HOTEL
+    .work-grid-container__hotel-item5 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    } //    RESIDENTIAL
+    .work-grid-container__residential-item5 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    } //    SPORT
+    .work-grid-container__sport-item5 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+}
+
+//Break-to-desktop work projects grid adjustments
+@media screen and (min-width:$break-to-desktop) {
+    //    GENERAL text for Hotel Residential and Sport
+    .work-grid-container__item--text {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        &:hover {
+            box-shadow: none;
+            transform: none;
+        }
+    } //    HOTEL
+    .work-grid-container__hotel-item1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .work-grid-container__hotel-item5 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    } //    RESIDENTIAL
+    .work-grid-container__residential-item1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .work-grid-container__residential-item5 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    } //    SPORT
+    .work-grid-container__sport-item1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .work-grid-container__sport-item5 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+}
+
+//Business hotel grid items background images-----------------------------
+.work-grid-container__hotel-item1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/low-opt/87-low.jpg);
+    @media screen and (min-width: $break-to-desktop) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/medium-opt/87-medium.jpg);
+    }
+}
+
+.work-grid-container__hotel-item2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/low-opt/4569-low.jpg);
+}
+
+.work-grid-container__hotel-item4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/low-opt/6987-low.jpg);
+}
+
+.work-grid-container__hotel-item5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/low-opt/5698-low.jpg);
+}
+
+
+//Residential building grid items background images-----------------------------
+.work-grid-container__residential-item1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/low-opt/78-low.jpg);
+    @media screen and (min-width: $break-to-desktop) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/medium-opt/78-medium.jpg);
+    }
+}
+
+.work-grid-container__residential-item2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/low-opt/28.1-low.jpg);
+}
+
+.work-grid-container__residential-item4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/low-opt/888-low.jpg);
+}
+
+.work-grid-container__residential-item5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/residential/low-opt/49-low.jpg);
+}
+
+
+//Sports center grid items background images-----------------------------
+.work-grid-container__sport-item1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/low-opt/2-low.jpg);
+    @media screen and (min-width: $break-to-desktop) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/medium-opt/2-medium.jpg);
+    }
+}
+
+.work-grid-container__sport-item2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/low-opt/pop-low.jpg);
+}
+
+.work-grid-container__sport-item4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/low-opt/9-low.jpg);
+}
+
+.work-grid-container__sport-item5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/sport/low-opt/4-low.jpg);
+}
+
+.work-grid-container__item--text {
+    padding: 20px;
+    min-height: 270px;
+    position: relative;
+
+    @media screen and (min-width: $break-to-tablet) {
+        padding: 0;
+    }
+    p {
+        opacity: 1;
+        color: $black;
+        padding: 0;
+    }
+    .emphasize-text {
+        color: $red;
+        font-weight: bolder;
+    }
+}
+
+.work-grid-container__read-more {
+    text-decoration: none;
+    border-left: 2px solid $red;
+    position: absolute;
+    bottom: 25px;
+    padding: 15px;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        background: $red;
+        color: #fff;
+    }
+    @media screen and (min-width: $break-to-tablet) {
+        bottom: 0;
+    }
+}
+
+//------------------------------------------------------------Styling for PROJECT page-----------------------------------------------------------------------
+.project-grid-container {
+    display: grid;
+    min-height: 4250px;
+    @media screen and (min-width: $break-to-tablet) {
+        min-height: 300px;
+    }
+    
+    
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto 1fr 1fr 1fr 1fr 1fr auto; //    PROJECT GRID TABLET TABLET TABLET----------------------------------------------------
+    @media screen and (min-width: $break-to-tablet) {
+        grid-template-rows: 33vh 33vh 33vh 33vh 231vh 33vh 33vh 33vh 231vh;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px; 
+        
+        
+        //         Illustrations part of the grid-----------------------------
+        .project-grid-container__item-image1 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+        .project-grid-container__item-image2 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+        .project-grid-container__item-image4 {
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+        } //        Grpahics part of the grid-------------------------
+        .project-grid-container__item-image17 {
+            grid-column: 1 / 3;
+            grid-row: 8 / 9;
+        } 
+    } 
+    
+    
+    //    PROJECT GRID DESkTOP DESkTOP DESkTOP
+    @media screen and (min-width: $break-to-desktop) {
+        grid-template-rows: 33vh 33vh 33vh 135vh 33vh 33vh 33vh auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 70%;
+        margin: 0 auto; 
+        .project-grid-container.residential{
+            grid-template-rows: 33vh 33vh 33vh 135vh 33vh 33vh 33vh 99vh
+        }
+        
+        
+        
+        
+        
+        //         Illustrations part of the grid-----------------------------
+        .project-grid-container__item-image1 {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+        .project-grid-container__item-image2 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        .project-grid-container__item-image3 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .project-grid-container__item-image4 {
+            grid-column: 2 / 4;
+            grid-row: 3 / 4;
+        } 
+        //         Graphics part of the grid-----------------------------
+        .project-grid-container__item-image14 {
+            grid-column: 1 / 3;
+            grid-row: 6 / 7;
+        }
+        .project-grid-container__item-image15 {
+            grid-column: 3 / 4;
+            grid-row: 6 / 7;
+        }
+        .project-grid-container__item-image16 {
+            grid-column: 1 / 2;
+            grid-row: 7 / 8;
+        }
+        .project-grid-container__item-image17 {
+            grid-column: 2 / 4;
+            grid-row: 7 / 8;
+        }
+    }
+}
+
+
+//        SUBGRID project page - MOBILE VERSION--------------------------------------------------------
+.project-grid-container__subgrid {
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+    padding-top: 1px;
+    background: $dirty-white;
+}
+
+//Subgrid proejct page - mobile version graphics
+.project-grid-container__subgrid--5rows {
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    
+}
+.project-grid-container__subgrid--5rows.residential{
+        grid-template-rows: 100px 100px 100px ;
+    }
+
+//        SUBGRID project page - TABLET VERSION -------------------------------------------------------
+@media screen and (min-width: $break-to-tablet) {
+    .project-grid-container__subgrid.project-grid-container__subgrid--3rows {
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+        grid-gap: 10px;
+        //            Subgrid tablet layout
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr; 
+        //        Illustrations--
+        .project-grid-container__item-image6 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+        .project-grid-container__item-image7 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+        .project-grid-container__item-image9 {
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+        }
+        .project-grid-container__item-image11 {
+            grid-column: 2 / 3;
+            grid-row: 5 / 7;
+        }
+        .project-grid-container__item-image12 {
+            grid-column: 1 / 2;
+            grid-row: 6 / 8;
+        }
+    } 
+//        Graphics--
+    .project-grid-container__subgrid.project-grid-container__subgrid--5rows {
+        grid-column: 1 / 3;
+        grid-row: 9 / 10;
+        background: #fff;
+        padding: 10px 0 0 0;
+        grid-gap: 10px;
+        grid-template-rows: repeat(7, 33vh);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project-grid-container__subgrid--5rows.residential{
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+
+//        SUBGRID project page - Desktop-------------------------------------------------------
+@media screen and (min-width: $break-to-desktop) {
+    .project-grid-container__subgrid.project-grid-container__subgrid--3rows {
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
+        grid-gap: 10px;
+        //            Subgrid tablet layout
+        grid-template-rows: 33vh 33vh 33vh 33vh;
+        grid-template-columns: 1fr 1fr 1fr; 
+        //        Illustrations--
+        .project-grid-container__item-image5 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .project-grid-container__item-image6 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+        .project-grid-container__item-image7 {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+        .project-grid-container__item-image8 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+        .project-grid-container__item-image9 {
+            grid-column: 2 / 4;
+            grid-row: 3 / 4;
+        }
+        .project-grid-container__item-image11 {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+        .project-grid-container__item-image12 {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+        .project-grid-container__item-image13 {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+        }
+    } 
+    //        Graphics--
+    .project-grid-container__subgrid.project-grid-container__subgrid--5rows {
+        grid-column: 1 / 4;
+        grid-row: 8 / 9;
+
+        grid-template-rows: repeat(5, 33vh);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .project-grid-container__subgrid--5rows.residential{
+        grid-template-rows: repeat(3, 33vh);
+    }
+}
+
+
+//Introductory text
+.project-grid-container__item--text {
+    background: #fff;
+    color: $black;
+    padding: 60px 20px 20px 20px;
+
+    h2 {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-left: 3px solid $black;
+    }
+}
+
+@media screen and (min-width: $break-to-desktop) {
+    .project-grid-container__item--text {
+        padding: 15vh 0 0 7px;
+        max-width: 700px;
+    }
+    //        introduction text to illustrations
+    .project-grid-container__item--text.illustrations {
+
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+
+    } 
+    //         introduction text to graphics
+    .project-grid-container__item--text.graphics {
+        grid-column: 1 / 4;
+        grid-row: 5 / 6;
+    }
+
+}
+
+
+.project-grid-container__item {
+    background-position: center;
+    background-size: cover; 
+}
+
+//---------------BUSINESS HOTEL items background images BUSINESS HOTEL--------------------------------------------------------------------------------
+//Visualizations
+.project-grid-container__item-image1.business {
+    background-image: url(../images/hotel/low-opt/87-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/87-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image2.business {
+    background-image: url(../images/hotel/low-opt/4569-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/4569-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image3.business {
+    background-image: url(../images/hotel/low-opt/6987-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/6987-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image4.business {
+    background-image: url(../images/hotel/low-opt/1222-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/1222-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image5.business {
+    background-image: url(../images/hotel/low-opt/89-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/89-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image6.business {
+    background-image: url(../images/hotel/low-opt/86235-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/86235-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image7.business {
+    background-image: url(../images/hotel/low-opt/65897-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/65897-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image8.business {
+    background-image: url(../images/hotel/low-opt/5826-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/5826-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image9.business {
+    background-image: url(../images/hotel/low-opt/5698-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/5698-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image10.business {
+    background-image: url(../images/hotel/low-opt/88-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/88-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image11.business {
+    background-image: url(../images/hotel/low-opt/1111-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/1111-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image12.business {
+    background-image: url(../images/hotel/low-opt/986-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/986-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image13.business {
+    background-image: url(../images/hotel/low-opt/325-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/325-medium.jpg);
+    }
+}
+
+//Graphics
+.project-grid-container__item-image14.business {
+    background-image: url(../images/hotel/low-opt/fasada1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/fasada1-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image15.business {
+    background-image: url(../images/hotel/low-opt/fasada2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/fasada2-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image16.business {
+    background-image: url(../images/hotel/low-opt/fasada3-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/fasada3-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image17.business {
+    background-image: url(../images/hotel/low-opt/fasada4-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/fasada4-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image18.business {
+    background-image: url(../images/hotel/low-opt/barplan-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/barplan-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image19.business {
+    background-image: url(../images/hotel/low-opt/cut1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/cut1-1-medium.jpg);
+    }
+
+}
+
+.project-grid-container__item-image20.business {
+    background-image: url(../images/hotel/low-opt/cut2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/cut2-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image21.business {
+    background-image: url(../images/hotel/low-opt/plan1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/plan1-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image22.business {
+    background-image: url(../images/hotel/low-opt/plan2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/plan2-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image23.business {
+    background-image: url(../images/hotel/low-opt/plan3-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/plan3-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image24.business {
+    background-image: url(../images/hotel/low-opt/plan4-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/plan4-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image25.business {
+    background-image: url(../images/hotel/low-opt/rooms-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/rooms-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image26.business {
+    background-image: url(../images/hotel/low-opt/type-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/type-1-medium-opt.jpg);
+    }
+}
+
+.project-grid-container__item-image27.business {
+    background-image: url(../images/hotel/low-opt/type-plan-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/type-plan-1-medium-opt.jpg);
+    }
+}
+
+.project-grid-container__item-image28.business {
+    background-image: url(../images/hotel/low-opt/hotel-new-sit-legend-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/hotel-new-sit-legend-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image29.business {
+    background-image: url(../images/hotel/low-opt/hotel-situated-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/hotel-situated-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image30.business {
+    background-image: url(../images/hotel/low-opt/sit1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/sit1-1-medium-opt.jpg);
+    }
+}
+
+.project-grid-container__item-image31.business {
+    background-image: url(../images/hotel/low-opt/sit2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/hotel/medium-opt/sit2-1-medium-opt.jpg);
+    }
+}
+
+
+
+
+
+//---------------Sports Center items background images SPORTS CENTER--------------------------------------------------------------------------------
+//Visualizations
+.project-grid-container__item-image1.sport {
+    background-image: url(../images/sport/low-opt/14-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/14-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image2.sport {
+    background-image: url(../images/sport/low-opt/3-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/3-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image3.sport {
+    background-image: url(../images/sport/low-opt/9-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/9-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image4.sport {
+    background-image: url(../images/sport/low-opt/19-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/19-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image5.sport{
+    background-image: url(../images/sport/low-opt/4-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/4-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image6.sport {
+    background-image: url(../images/sport/low-opt/13-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/13-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image7.sport {
+    background-image: url(../images/sport/low-opt/6-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/6-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image8.sport {
+    background-image: url(../images/sport/low-opt/10-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/10-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image9.sport {
+    background-image: url(../images/sport/low-opt/24-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/24-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image10.sport {
+    background-image: url(../images/sport/low-opt/21-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/21-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image11.sport {
+    background-image: url(../images/sport/low-opt/20-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/20-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image12.sport {
+    background-image: url(../images/sport/low-opt/2-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/2-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image13.sport {
+    background-image: url(../images/sport/low-opt/989-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/989-medium.jpg);
+    }
+}
+
+
+
+
+//Graphics
+.project-grid-container__item-image14.sport {
+    background-image: url(../images/sport/low-opt/facade1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/facade1-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image15.sport {
+    background-image: url(../images/sport/low-opt/plan-distribution-when-0.00-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/plan-razpredelenie-kota-0.00-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image16.sport {
+    background-image: url(../images/sport/low-opt/situation-sport-final-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/situation-sport-final-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image17.sport {
+    background-image: url(../images/sport/low-opt/facade3-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/facade3-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image18.sport {
+    background-image: url(../images/sport/low-opt/facades-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/facade4-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image19.sport {
+    background-image: url(../images/sport/low-opt/facade2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/facade2-1-medium.jpg);
+    }
+
+}
+
+.project-grid-container__item-image20.sport {
+    background-image: url(../images/sport/low-opt/facades-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/facades-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image21.sport {
+    background-image: url(../images/sport/low-opt/obemi-1.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/obemi-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image22.sport {
+    background-image: url(../images/sport/low-opt/cut1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/cut1-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image23.sport {
+    background-image: url(../images/sport/low-opt/cut2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/cut2-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image24.sport {
+    background-image: url(../images/sport/low-opt/sport4-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/sport4-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image25.sport {
+    background-image: url(../images/sport/low-opt/s-01-building-section-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/s-01-building-section-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image26.sport {
+    background-image: url(../images/sport/low-opt/sport2-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/sport2-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image27.sport {
+    background-image: url(../images/sport/low-opt/sport3-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/sport3-1.jpg);
+    }
+}
+
+.project-grid-container__item-image28.sport {
+    background-image: url(../images/sport/low-opt/sport4-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/sport4-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image29.sport {
+    background-image: url(../images/sport/low-opt/analysis-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/sport/medium-opt/analysis-1-medium.jpg);
+    }
+}
+
+//---------------Sports Center items background images SPORTS CENTER--------------------------------------------------------------------------------
+//Visualizations
+.project-grid-container__item-image1.residential {
+    background-image: url(../images/residential/low-opt/4-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/4-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image2.residential {
+    background-image: url(../images/residential/low-opt/2-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/2-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image3.residential {
+    background-image: url(../images/residential/low-opt/47-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/47-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image4.residential {
+    background-image: url(../images/residential/low-opt/27-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/27-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image5.residential{
+    background-image: url(../images/residential/low-opt/5-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/5-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image6.residential {
+    background-image: url(../images/residential/low-opt/8-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/8-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image7.residential {
+    background-image: url(../images/residential/low-opt/28.1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/28.1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image8.residential {
+    background-image: url(../images/residential/low-opt/888-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/888-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image9.residential {
+    background-image: url(../images/residential/low-opt/49-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/49-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image10.residential {
+    background-image: url(../images/residential/low-opt/7-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/7-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image11.residential {
+    background-image: url(../images/residential/low-opt/28-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/28-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image12.residential {
+    background-image: url(../images/residential/low-opt/31-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/31-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image13.residential {
+    background-image: url(../images/residential/low-opt/35-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/35-medium.jpg);
+    }
+}
+
+
+
+
+//Graphics
+.project-grid-container__item-image14.residential {
+    background-image: url(../images/residential/low-opt/cut-1-1-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/cut-1-1-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image15.residential {
+    background-image: url(../images/residential/low-opt/cut-2-2-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/cut-2-2-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image16.residential {
+    background-image: url(../images/residential/low-opt/facade-east-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/facade-east-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image17.residential {
+    background-image: url(../images/residential/low-opt/facade-north-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/facade-north-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image18.residential {
+    background-image: url(../images/residential/low-opt/facade-south-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/facade-south-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image19.residential {
+    background-image: url(../images/residential/low-opt/plan-ground-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/plan-floor-level-medium.jpg);
+    }
+
+}
+
+.project-grid-container__item-image20.residential {
+    background-image: url(../images/residential/low-opt/plan-first-floor-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/plan-first-floor-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image21.residential {
+    background-image: url(../images/residential/low-opt/plan-second-floor-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/plan-second-floor-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image22.residential {
+    background-image: url(../images/residential/low-opt/plan-third-fourth-floor-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/plan-third-and-fourth-floor-medium.jpg);
+    }
+}
+
+
+.project-grid-container__item-image23.residential {
+    background-image: url(../images/residential/low-opt/plan-fifth-floor-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/plan-fifth-floor-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image24.residential {
+    background-image: url(../images/residential/low-opt/plan-roof-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/plan-roof-medium.jpg);
+    }
+}
+
+.project-grid-container__item-image25.residential {
+    background-image: url(../images/residential/low-opt/situation-m1_500-low.jpg);
+    @media screen and (min-width: $break-to-tablet) {
+        background-image: url(../images/residential/medium-opt/situation-m1_500-medium.jpg);
+    }
+}
+
+
+
+.project-grid-container__item-image26.residential {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.project-grid-container__item-image27.residential {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.project-grid-container__item-image28.residential {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.project-grid-container__item-image29.residential {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+
+//Other projects CARDS
+.other-projects {
+
+    background: $dirty-white; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 3fr;
+    grid-gap: 10px;
+    padding: 60px 20px;
+
+    @media screen and (min-width: $break-to-desktop) {
+        padding: 60px 15%;
+    }
+    .other-projects__introduction {
+        grid-column: 1 / span 2;
+        grid-row: 1 / 2;
+        color: $black;
+        text-align: center;
+        font-weight: bold;
+        p {
+            max-width: 100%;
+        }
+
+    }
+    .other-projects__card {
+        background: #fff;
+        color: $black;
+        display: grid;
+        grid-template-rows: 150px 60px;
+        text-decoration: none;
+        box-shadow: 0px 2px 10px $shadow;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            box-shadow: 0px 2px 10px #333;
+        }
+
+    }
+    .other-projects__image {
+        background-position: center;
+        background-size: cover;
+    }
+    .other-projects__image--sport {
+        background-image: url(../images/sport/low-opt/2-low.jpg);
+    }
+    .other-projects__image--residential {
+        background-image: url(../images/residential/low-opt/78-low.jpg);
+    }
+    .other-projects__image--business {
+        background-image: url(../images/hotel/low-opt/87-low.jpg);
+
+    }
+    .other-porojects__text {
+        padding: 10px;
+        text-align: center;
+        margin: auto 0;
+    }
+}
+
+//---------------------------------------------------------Footer------------------------------------------------------------------------
+footer {
+    background: #fff;
+    color: $black;
+    padding: 20vh 20px;
+    position: relative;
+
+    h2 {
+        padding: 20px 0;
+        color: $pure-black;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    p {
+        margin: 0 auto;
+    }
+@media screen and (min-width:$break-to-tablet){
+        padding: 20vh 0;
+        p{
+            margin: 0 calc(15% + 4px);
+        }
+        h2{
+            margin: 0 calc(15% + 4px);
+        }
+    }
+}
+
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+
+    a {
+        text-decoration: none;
+        color: $black;
+        padding: 5px;
+        &:hover {
+            color: $red;
+            text-decoration: underline;
+        }
+    }
+    li {
+        display: inline;
+        text-align: left;
+    }
+    li + li:before {
+        content: ". ";
+    }
+
+    @media screen and (min-width: $break-to-desktop) {
+        left: calc(15% + 8px);
+    }
+}
+
+.developer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    p {
+        font-size: 14px;
+        color: #aaa;
+        padding: 7px 20px;
+        margin: 0 auto;
+    }
+
+    a {
+        color: #aaa;
+        &:hover {
+            color: $red;
+            text-decoration: none;
+        }
+    }
+}
