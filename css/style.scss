@@ -38,11 +38,9 @@ $red: #FF0022;
         }
 @keyframes appear-bottom {
   from {
-    transform: translate(0px, -100px);
       opacity: 0;
   }
   to {
-    transform: translate(0px, 0px);
       opacity: 1;
   } 
         }
@@ -273,6 +271,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-attachment: local;
 }
 .page-header__content--project.business{
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/hotel/medium-opt/89-medium.jpg);
@@ -305,7 +304,9 @@ header {
         animation-fill-mode: forwards; 
         opacity: 0;
 }
-
+.page-header__button--project{
+    animation-delay: 0s;
+}
 .page-header__button:hover:before {
     left: 0%;
     right: auto;
@@ -473,7 +474,7 @@ header {
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 70%;
         margin: 0 auto;
-        padding: 20px 0 100px 0;
+        padding: 20px 0 60px 0;
     }
 
     a {
@@ -1655,7 +1656,7 @@ footer {
         text-align: left;
     }
     li + li:before {
-        content: ". ";
+        content: "/ ";
     }
 
     @media screen and (min-width: $break-to-desktop) {

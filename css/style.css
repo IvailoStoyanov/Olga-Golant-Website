@@ -33,22 +33,14 @@ hr {
 
 @-webkit-keyframes appear-bottom {
   from {
-    -webkit-transform: translate(0px, -100px);
-    transform: translate(0px, -100px);
     opacity: 0; }
   to {
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
     opacity: 1; } }
 
 @keyframes appear-bottom {
   from {
-    -webkit-transform: translate(0px, -100px);
-    transform: translate(0px, -100px);
     opacity: 0; }
   to {
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
     opacity: 1; } }
 
 h1,
@@ -229,7 +221,8 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  -webkit-background-attachment: local; }
 
 .page-header__content--project.business {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.35)), to(rgba(0, 0, 0, 0.35))), url(../images/hotel/medium-opt/89-medium.jpg);
@@ -271,6 +264,10 @@ header {
   .page-header__button:hover {
     color: #212121;
     background: transparent; }
+
+.page-header__button--project {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
 
 .page-header__button:hover:before {
   left: 0%;
@@ -428,7 +425,7 @@ header {
       grid-template-columns: 1fr 1fr 1fr;
       max-width: 70%;
       margin: 0 auto;
-      padding: 20px 0 100px 0; } }
+      padding: 20px 0 60px 0; } }
   .work-grid-container a {
     text-decoration: none; }
 
@@ -1395,7 +1392,7 @@ footer {
     display: inline;
     text-align: left; }
   .breadcrumb li + li:before {
-    content: ". "; }
+    content: "/ "; }
   @media screen and (min-width: 770px) {
     .breadcrumb {
       left: calc(15% + 8px); } }
