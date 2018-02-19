@@ -218,7 +218,7 @@ header {
 }
 
 .page-header__role {
-    margin-bottom: 40px;
+    margin: 0 0 40px 4px;
     display: block;
     font-weight: bold;
     letter-spacing: 1px;
@@ -227,7 +227,7 @@ header {
     opacity: 0;
     @media screen and (min-width: $break-to-tablet) {
         font-size: 1.5rem;
-        margin-bottom: 70px;
+        margin: 0 0 70px 11px;
     }
 }
 
