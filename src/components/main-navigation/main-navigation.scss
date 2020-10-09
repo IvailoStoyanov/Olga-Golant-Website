@@ -1,0 +1,64 @@
+@import "../../global/breakpoints.scss";
+
+nav {
+  position: fixed;
+  width: 100% ;
+  font-family: var(--accent);
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+  z-index: 3;
+
+  ul {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0 8px;
+    list-style: none;
+
+    @media screen and (min-width: $break-to-tablet) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    li {
+      padding: 15px 0.35rem;
+      border-bottom: 3px solid transparent;
+      transition: 0.3s ease-in-out;
+
+      @media screen and (min-width: $break-to-tablet) {
+        padding: 30px 7px;
+
+        &:hover {
+          border-bottom: 3px solid #fff;
+          padding: 35px 7px 10px 7px;
+        }
+
+        &:first-of-type:hover {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      padding: 15px 0;
+      text-decoration: none;
+      color: #fff;
+
+      @media screen and (min-width: 426px) {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.scrolled{
+  background: var(--black-tint);
+}

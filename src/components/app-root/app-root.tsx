@@ -10,20 +10,12 @@ export class AppRoot {
     return (
       <div>
         <header>
-          <nav id="navigation">
-            <ul>
-              <li><a class="logo" href="index.html" title="home page">O.G</a></li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="work.html" title="view my work">Work</a></li>
-              <li><a href="#aboutMe" title="link to my contact details">About</a></li>
-              <li><a href="#contactMe" title="link to my contact details">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="page-header page-header__content--home">
+          <main-navigation></main-navigation>
+          {/* <div class="page-header page-header__content--home">
             <h1>Olga Golant</h1>
             <span class="page-header__role">Architect</span>
             <a class="page-header__button" href="#aboutMe">About Me</a> <a class="page-header__button" href="#projects">Feature Work</a>
-          </div>
+          </div> */}
         </header>
 
         <main>
@@ -33,6 +25,9 @@ export class AppRoot {
               <stencil-route url="/profile/:name" component="app-profile" />
             </stencil-route-switch>
           </stencil-router>
+
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptates nostrum perferendis, consequuntur culpa velit aspernatur vel id cupiditate explicabo? Quod quo itaque voluptatibus iusto? Facilis facere vitae cum! Neque!</p>
         </main>
       </div>
     );
