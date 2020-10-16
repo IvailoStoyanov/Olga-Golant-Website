@@ -2,21 +2,23 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
-  styleUrl: 'app-home.css',
+  styleUrl: 'app-home.scss',
   shadow: true,
 })
 export class AppHome {
   render() {
     return (
       <div class="app-home">
-        <p>
-          Welcome to the Stencil App Starter. You can use this starter to build entire apps all with web components using Stencil! Check out our docs on{' '}
-          <a href="https://stenciljs.com">stenciljs.com</a> to get started.
-        </p>
-
-        <stencil-route-link url="/profile/stencil">
-          <button>Profile page</button>
-        </stencil-route-link>
+         <div class="hero-container          page-header page-header__content--home">
+            <h1>Olga Golant</h1>
+            <span class="page-header__role">Architect</span>
+            <stencil-route-link url="/#aboutMe">
+              <button title="to the info">About Me</button>
+            </stencil-route-link>
+            <stencil-route-link url="/work">
+              <button title="to the info">Feature Work</button>
+            </stencil-route-link>
+          </div>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import { r as registerInstance, h, g as getElement } from './index-5ded1fe5.js';
 import { A as ActiveRouter } from './active-router-2f414d94.js';
 import { m as matchPath } from './match-path-760e1797.js';
 import './location-utils-fea12957.js';
-import { i as isModifiedEvent } from './dom-utils-109a7d75.js';
+import { d as isModifiedEvent } from './dom-utils-8e73e88b.js';
 
 const getUrl = (url, root) => {
   // Don't allow double slashes

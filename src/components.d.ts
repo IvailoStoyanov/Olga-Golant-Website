@@ -5,16 +5,16 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil/router";
 export namespace Components {
     interface AppHome {
     }
-    interface AppProfile {
-        "match": MatchResults;
-    }
     interface AppRoot {
     }
+    interface BreadcrumbNav {
+    }
     interface MainNavigation {
+    }
+    interface WorkList {
     }
 }
 declare global {
@@ -24,17 +24,17 @@ declare global {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
-    }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
+    };
+    interface HTMLBreadcrumbNavElement extends Components.BreadcrumbNav, HTMLStencilElement {
+    }
+    var HTMLBreadcrumbNavElement: {
+        prototype: HTMLBreadcrumbNavElement;
+        new (): HTMLBreadcrumbNavElement;
     };
     interface HTMLMainNavigationElement extends Components.MainNavigation, HTMLStencilElement {
     }
@@ -42,28 +42,37 @@ declare global {
         prototype: HTMLMainNavigationElement;
         new (): HTMLMainNavigationElement;
     };
+    interface HTMLWorkListElement extends Components.WorkList, HTMLStencilElement {
+    }
+    var HTMLWorkListElement: {
+        prototype: HTMLWorkListElement;
+        new (): HTMLWorkListElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "breadcrumb-nav": HTMLBreadcrumbNavElement;
         "main-navigation": HTMLMainNavigationElement;
+        "work-list": HTMLWorkListElement;
     }
 }
 declare namespace LocalJSX {
     interface AppHome {
     }
-    interface AppProfile {
-        "match"?: MatchResults;
-    }
     interface AppRoot {
+    }
+    interface BreadcrumbNav {
     }
     interface MainNavigation {
     }
+    interface WorkList {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
-        "app-profile": AppProfile;
         "app-root": AppRoot;
+        "breadcrumb-nav": BreadcrumbNav;
         "main-navigation": MainNavigation;
+        "work-list": WorkList;
     }
 }
 export { LocalJSX as JSX };
@@ -71,9 +80,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "breadcrumb-nav": LocalJSX.BreadcrumbNav & JSXBase.HTMLAttributes<HTMLBreadcrumbNavElement>;
             "main-navigation": LocalJSX.MainNavigation & JSXBase.HTMLAttributes<HTMLMainNavigationElement>;
+            "work-list": LocalJSX.WorkList & JSXBase.HTMLAttributes<HTMLWorkListElement>;
         }
     }
 }

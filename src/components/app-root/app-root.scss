@@ -1,3 +1,5 @@
+@import "../../global/breakpoints.scss";
+
 header {
   // color: white;
   // height: 56px;
@@ -16,4 +18,93 @@ h1 {
 main {
   background: #f0f0f0;
   height: 1000px;
+}
+
+footer {
+  background: #fff;
+  color: var(--pure-black);
+  padding: 20vh 20px;
+  position: relative;
+
+  h2 {
+    font-family: var(--accent);
+    padding: 20px 0;
+    color: var(--pure-black);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0 auto;
+  }
+
+  a {
+    color: var(--red);
+  }
+
+  @media screen and (min-width: $break-to-tablet) {
+    padding: 20vh 0;
+
+    p {
+      margin: 0 calc(15% + 4px);
+    }
+
+    h2 {
+      margin: 0 calc(15% + 4px);
+    }
+  }
+}
+
+.breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (min-width: $break-to-desktop) {
+    left: calc(15% + 8px);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--pure-black);
+    padding: 5px;
+
+    &:hover {
+      color: var(--red);
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    display: inline;
+    text-align: left;
+  }
+
+  li + li:before {
+    content: "/ ";
+  }
+}
+
+.developer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  p {
+    font-size: 14px;
+    color: #aaa;
+    padding: 7px 20px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: #aaa;
+
+    &:hover {
+      color: var(--red);
+      text-decoration: none;
+    }
+  }
 }
