@@ -45,6 +45,7 @@ footer {
   @media screen and (min-width: $break-to-tablet) {
     padding: 20vh 0;
 
+    margin-top: 100px;
     p {
       margin: 0 calc(15% + 4px);
     }
@@ -52,38 +53,6 @@ footer {
     h2 {
       margin: 0 calc(15% + 4px);
     }
-  }
-}
-
-.breadcrumb {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  padding: 0;
-  list-style: none;
-
-  @media screen and (min-width: $break-to-desktop) {
-    left: calc(15% + 8px);
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--pure-black);
-    padding: 5px;
-
-    &:hover {
-      color: var(--red);
-      text-decoration: underline;
-    }
-  }
-
-  li {
-    display: inline;
-    text-align: left;
-  }
-
-  li + li:before {
-    content: "/ ";
   }
 }
 

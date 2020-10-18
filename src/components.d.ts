@@ -5,14 +5,21 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { LocationSegments } from "@stencil/router";
 export namespace Components {
     interface AppHome {
     }
     interface AppRoot {
     }
     interface BreadcrumbNav {
+        "location": LocationSegments;
+    }
+    interface BreadcrumbNavItem {
+        "link": string;
     }
     interface MainNavigation {
+    }
+    interface TextSection {
     }
     interface WorkList {
     }
@@ -36,11 +43,23 @@ declare global {
         prototype: HTMLBreadcrumbNavElement;
         new (): HTMLBreadcrumbNavElement;
     };
+    interface HTMLBreadcrumbNavItemElement extends Components.BreadcrumbNavItem, HTMLStencilElement {
+    }
+    var HTMLBreadcrumbNavItemElement: {
+        prototype: HTMLBreadcrumbNavItemElement;
+        new (): HTMLBreadcrumbNavItemElement;
+    };
     interface HTMLMainNavigationElement extends Components.MainNavigation, HTMLStencilElement {
     }
     var HTMLMainNavigationElement: {
         prototype: HTMLMainNavigationElement;
         new (): HTMLMainNavigationElement;
+    };
+    interface HTMLTextSectionElement extends Components.TextSection, HTMLStencilElement {
+    }
+    var HTMLTextSectionElement: {
+        prototype: HTMLTextSectionElement;
+        new (): HTMLTextSectionElement;
     };
     interface HTMLWorkListElement extends Components.WorkList, HTMLStencilElement {
     }
@@ -52,7 +71,9 @@ declare global {
         "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
         "breadcrumb-nav": HTMLBreadcrumbNavElement;
+        "breadcrumb-nav-item": HTMLBreadcrumbNavItemElement;
         "main-navigation": HTMLMainNavigationElement;
+        "text-section": HTMLTextSectionElement;
         "work-list": HTMLWorkListElement;
     }
 }
@@ -62,8 +83,14 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface BreadcrumbNav {
+        "location"?: LocationSegments;
+    }
+    interface BreadcrumbNavItem {
+        "link"?: string;
     }
     interface MainNavigation {
+    }
+    interface TextSection {
     }
     interface WorkList {
     }
@@ -71,7 +98,9 @@ declare namespace LocalJSX {
         "app-home": AppHome;
         "app-root": AppRoot;
         "breadcrumb-nav": BreadcrumbNav;
+        "breadcrumb-nav-item": BreadcrumbNavItem;
         "main-navigation": MainNavigation;
+        "text-section": TextSection;
         "work-list": WorkList;
     }
 }
@@ -82,7 +111,9 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "breadcrumb-nav": LocalJSX.BreadcrumbNav & JSXBase.HTMLAttributes<HTMLBreadcrumbNavElement>;
+            "breadcrumb-nav-item": LocalJSX.BreadcrumbNavItem & JSXBase.HTMLAttributes<HTMLBreadcrumbNavItemElement>;
             "main-navigation": LocalJSX.MainNavigation & JSXBase.HTMLAttributes<HTMLMainNavigationElement>;
+            "text-section": LocalJSX.TextSection & JSXBase.HTMLAttributes<HTMLTextSectionElement>;
             "work-list": LocalJSX.WorkList & JSXBase.HTMLAttributes<HTMLWorkListElement>;
         }
     }

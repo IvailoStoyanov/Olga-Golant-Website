@@ -21,7 +21,7 @@ const MainNavigation = class {
     }
   }
   render() {
-    return (h(Host, null, h("nav", { ref: (el) => (this.navigation = el), id: "navigation" }, h("ul", null, h("li", null, h("stencil-route-link", { class: "hydrated" }, h("a", { href: "/", class: "logo" }, "O.G"))), h("li", null, h("stencil-route-link", { class: "hydrated" }, h("a", { href: "/" }, "Home"))), h("li", null, h("stencil-route-link", { class: "hydrated" }, h("a", { href: "/work", title: "view my work" }, "Work"))), h("li", null, h("stencil-route-link", { class: "hydrated" }, h("a", { href: "/", title: "read more about me" }, "About"))), h("li", null, h("stencil-route-link", { class: "hydrated" }, h("a", { href: "#contactMe" }, "Contact"))))), h("slot", null)));
+    return (h(Host, null, h("nav", { ref: (el) => (this.navigation = el), id: "navigation" }, h("ul", null, h("li", null, h("stencil-route-link", { class: "hydrated", url: "/", activeClass: "logo" }, "O.G")), h("li", null, h("stencil-route-link", { class: "hydrated", url: "/" }, "Home")), h("li", null, h("stencil-route-link", { class: "hydrated", url: "/work", title: "view my work" }, "Work")), h("li", null, h("stencil-route-link", { class: "hydrated", url: "/", title: "read more about me" }, "About")), h("li", null, h("stencil-route-link", { class: "hydrated", url: "#contactMe" }, "Contact")))), h("slot", null)));
   }
 };
 MainNavigation.style = mainNavigationCss;

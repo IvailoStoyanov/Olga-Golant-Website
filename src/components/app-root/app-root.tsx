@@ -1,4 +1,4 @@
-import { Component, h } from "@stencil/core";
+import { Component, h, Host } from "@stencil/core";
 
 @Component({
   tag: "app-root",
@@ -8,7 +8,7 @@ import { Component, h } from "@stencil/core";
 export class AppRoot {
   render() {
     return (
-      <div>
+      <Host>
         {/* a header with two variations depending on the class name? */}
         <header>
           <main-navigation></main-navigation>
@@ -22,20 +22,8 @@ export class AppRoot {
             </stencil-route-switch>
           </stencil-router>
 
-
           <footer id="contactMe">
-
-
-            {/* this needs to be adapted to show the correct breadcrumbs depending on which page you are on! */}
-            <ul class="breadcrumb">
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="work.html" title="view my work">Work</a>
-              </li>
-            </ul>
-
+            <breadcrumb-nav></breadcrumb-nav>
             <h2>Contact Me</h2>
             <p>
               If you want to hire me or to collaborate on a project, get in
@@ -54,7 +42,7 @@ export class AppRoot {
             </div>
           </footer>
         </main>
-      </div>
+      </Host>
     );
   }
 }

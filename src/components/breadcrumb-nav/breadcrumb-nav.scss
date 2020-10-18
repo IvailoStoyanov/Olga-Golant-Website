@@ -1,3 +1,33 @@
-:host {
-  display: block;
+@import "../../global/breakpoints.scss";
+
+.breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (min-width: $break-to-desktop) {
+    left: calc(15% + 8px);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--pure-black);
+    padding: 5px;
+
+    &:hover {
+      color: var(--red);
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    display: inline;
+    text-align: left;
+  }
+
+  li + li:before {
+    content: "/ ";
+  }
 }

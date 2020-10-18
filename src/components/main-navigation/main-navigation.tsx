@@ -34,33 +34,40 @@ export class MainNavigation {
         >
           <ul>
             <li>
-              <stencil-route-link class="hydrated">
-                <a href="/" class="logo">O.G</a>
+              <stencil-route-link class="hydrated" url="/" activeClass="logo">
+                O.G
               </stencil-route-link>
             </li>
             <li>
-              <stencil-route-link class="hydrated">
-                <a href="/" >Home</a>
+              <stencil-route-link class="hydrated" url="/">
+                Home
               </stencil-route-link>
             </li>
             <li>
-              <stencil-route-link class="hydrated">
-                <a href="/work" title="view my work">Work</a>
+              <stencil-route-link
+                class="hydrated"
+                url="/work"
+                title="view my work"
+              >
+                Work
               </stencil-route-link>
             </li>
             <li>
-              <stencil-route-link class="hydrated">
-                <a href="/" title="read more about me">About</a>
+              <stencil-route-link
+                class="hydrated"
+                url="/"
+                title="read more about me"
+              >
+                About
               </stencil-route-link>
             </li>
             <li>
-              <stencil-route-link class="hydrated">
-                <a href="#contactMe">Contact</a>
+              <stencil-route-link class="hydrated" url="#contactMe">
+                Contact
               </stencil-route-link>
             </li>
           </ul>
         </nav>
-
         <slot></slot>
       </Host>
     );
