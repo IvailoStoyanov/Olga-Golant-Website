@@ -1,0 +1,21 @@
+@import "../../global/breakpoints.scss";
+
+:host {
+  display: block;
+}
+
+.work-page__hero-container {
+  padding: 15vh 20px 10vh 20px;
+  //    text-align: center;
+  height: auto;
+  background: var(--light-black);
+  color: var(--white);
+
+  @media screen and (min-width: $break-to-tablet) {
+    padding: 15vh 0 10vh calc(15% + 4px);
+  }
+
+  h1 {
+    margin: 0;
+  }
+}

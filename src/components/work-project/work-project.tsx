@@ -1,18 +1,19 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'work-list',
-  styleUrl: 'work-list.scss',
+  tag: 'work-project',
+  styleUrl: 'work-project.scss',
   shadow: true,
 })
-export class WorkList {
+export class WorkProject {
 
   render() {
     return (
       <Host>
-        <div>BANANAS</div>
+        Project
+        <header></header> 
+        <slot></slot>
       </Host>
     );
   }
-
 }

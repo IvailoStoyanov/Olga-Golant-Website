@@ -15,19 +15,32 @@ const BreadcrumbNav = class {
       return null;
     }
     else {
+      const regex = /-/gi;
       return this.location.pathname.split("/").map((element) => {
         if (element == "") {
           return (h("li", null, h("stencil-route-link", { class: "hydrated", url: "/" }, "Home")));
         }
-        ;
         if (element == "work") {
           return (h("li", null, h("stencil-route-link", { class: "hydrated", url: "/work" }, element.charAt(0).toUpperCase() + element.slice(1))));
         }
-        ;
-        if (element == "test") {
-          return (h("li", null, h("stencil-route-link", { class: "hydrated", url: "/work/test" }, element)));
+        if (element == "business-hotel") {
+          const projectName = element.replace(regex, ' ').split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          });
+          return (h("li", null, h("stencil-route-link", { class: "hydrated", url: "/work/business-hotel" }, projectName.join(' '))));
         }
-        ;
+        if (element == "residential-building") {
+          const projectName = element.replace(regex, ' ').split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          });
+          return (h("li", null, h("stencil-route-link", { class: "hydrated", url: "/work/business-hotel" }, projectName.join(' '))));
+        }
+        if (element == "sports-center") {
+          const projectName = element.replace(regex, ' ').split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          });
+          return (h("li", null, h("stencil-route-link", { class: "hydrated", url: "/work/business-hotel" }, projectName.join(' '))));
+        }
       });
     }
   }

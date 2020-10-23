@@ -10,15 +10,19 @@ export class AppRoot {
     return (
       <Host>
         {/* a header with two variations depending on the class name? */}
-        <header>
-          <main-navigation></main-navigation>
-        </header>
-
+        <main-navigation></main-navigation>
         <main>
           <stencil-router scrollTopOffset={0}>
             <stencil-route-switch>
               <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/work" component="work-list" exact={true} />
+              <stencil-route url="/work" component="work-page" exact={true} />
+              <stencil-route url="/work/project" component="work-project" exact={true} />
+
+              {/* this on the bottom instead of this on top */}
+              <stencil-route url="/docs/:pageName" routeRender={({ match }) => (
+                <doc-component page={match!.url}></doc-component>
+              )}/>
+
             </stencil-route-switch>
           </stencil-router>
 
@@ -35,7 +39,10 @@ export class AppRoot {
             <div class="developer">
               <p>
                 Website built by{" "}
-                <a href="http://www.15082862.webdevmmu.uk/" title="link to Ivaylo Stoyanov's portfolio">
+                <a
+                  href="http://www.15082862.webdevmmu.uk/"
+                  title="link to Ivaylo Stoyanov's portfolio"
+                >
                   Ivaylo Stoyanov
                 </a>
               </p>

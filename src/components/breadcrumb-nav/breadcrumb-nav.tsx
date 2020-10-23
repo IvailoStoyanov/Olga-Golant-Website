@@ -13,6 +13,8 @@ export class BreadcrumbNav {
     if (this.location.pathname == "/") {
       return null;
     } else {
+      const regex = /-/gi;
+
       return this.location.pathname.split("/").map((element) => {
         if (element == "") {
           return (
@@ -22,7 +24,7 @@ export class BreadcrumbNav {
               </stencil-route-link>
             </li>
           );
-        };
+        }
         if (element == "work") {
           return (
             <li>
@@ -31,16 +33,46 @@ export class BreadcrumbNav {
               </stencil-route-link>
             </li>
           );
-        };
-        if (element == "test") {
+        }
+        if (element == "business-hotel") {
+          const projectName = element.replace(regex, ' ').split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          });
+
           return (
             <li>
-              <stencil-route-link class="hydrated" url="/work/test">
-                {element}
+              <stencil-route-link class="hydrated" url="/work/business-hotel">
+                {projectName.join(' ')}
               </stencil-route-link>
             </li>
           );
-        };
+        }
+        if (element == "residential-building") {
+          const projectName = element.replace(regex, ' ').split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          });
+
+          return (
+            <li>
+              <stencil-route-link class="hydrated" url="/work/business-hotel">
+                {projectName.join(' ')}
+              </stencil-route-link>
+            </li>
+          );
+        }
+        if (element == "sports-center") {
+          const projectName = element.replace(regex, ' ').split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          });
+
+          return (
+            <li>
+              <stencil-route-link class="hydrated" url="/work/business-hotel">
+                {projectName.join(' ')}
+              </stencil-route-link>
+            </li>
+          );
+        }
       });
     }
   }

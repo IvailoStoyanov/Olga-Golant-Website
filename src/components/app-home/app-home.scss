@@ -1,9 +1,71 @@
+@import "../../global/breakpoints.scss";
+
 .app-home {
   // padding: 10px;
+  &__hero-container {}
+}
+
+//these should be under global header styles!
+header {
+  padding: 40vh 0 0 0;
+  height: 55vh;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),url(./../../assets/images/hero-image.jpg);
+  //    Photo by Sergey Zolkin on Unsplash
+  background-size: cover;
+  background-position: center;
+}
+
+// these should stay here
+.app-home__hero-container {
+  margin-top: 0 20px;
+
+  h1 {
+    margin-top: 0;  // THIS SHOULD BE GLOBAL
+    margin-bottom: 5px;
+    font-size: 2.8rem;
+    position: relative;
+    //        Animate in from left
+    // animation: appear-left 1.3s ease 0.5s;
+    // animation-fill-mode: forwards;
+    // opacity: 0;
+  }
+
+  @media screen and (min-width: $break-to-tablet) {
+    max-width: 390px;
+    margin: 0 calc(15% + 4px);
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $break-to-desktop) {
+    max-width: 600px;
+
+    h1 {
+      font-size: 6rem;
+    }
+  }
+
+  .role {
+    margin: 0 0 40px 4px;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    // animation: appear-left 1.3s ease 1.3s;
+    // animation-fill-mode: forwards;
+    // opacity: 0;
+    @media screen and (min-width: $break-to-tablet) {
+      font-size: 1.5rem;
+      margin: 0 0 70px 11px;
+    }
+  }
 }
 
 button {
   color: var(--white);
+  background: transparent;
   border: 2px solid var(--white);
   padding: 10px 20px;
   outline: 0;
