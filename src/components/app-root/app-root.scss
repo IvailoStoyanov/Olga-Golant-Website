@@ -16,8 +16,7 @@ h1 {
 }
 
 main {
-  background: #f0f0f0;
-  height: 1000px;
+  // background: #f0f0f0;
 }
 
 footer {
@@ -44,8 +43,7 @@ footer {
 
   @media screen and (min-width: $break-to-tablet) {
     padding: 20vh 0;
-
-    margin-top: 100px;
+    
     p {
       margin: 0 calc(15% + 4px);
     }

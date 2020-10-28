@@ -11,7 +11,7 @@ export class WorkProject {
     return (
       <Host>
         Project
-        <header></header> 
+        <header></header>
         <slot></slot>
       </Host>
     );

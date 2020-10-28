@@ -22,6 +22,9 @@ export namespace Components {
     interface TextSection {
     }
     interface WorkListGird {
+        "background": string;
+        "description": string;
+        "heading": string;
     }
     interface WorkListSingle {
     }
@@ -120,6 +123,9 @@ declare namespace LocalJSX {
     interface TextSection {
     }
     interface WorkListGird {
+        "background"?: string;
+        "description"?: string;
+        "heading"?: string;
     }
     interface WorkListSingle {
     }

@@ -1,3 +1,86 @@
-:host {
-  display: block;
+@import "../../global/breakpoints.scss";
+
+.work-list-grid {
+  display: inline-block;
+  margin: 70px auto 0 auto;
+  text-decoration: none;
+
+  @media screen and (min-width: $break-to-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 10px;
+  }
+
+  @media screen and (min-width: $break-to-desktop) {
+    margin: 150px auto 50px auto;
+  }
+
+  @media screen and (min-width: $break-to-desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &:hover {
+    h3 {
+      color: var(--red);
+    }
+
+    button {
+      background: var(--red);
+      color: #fff;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-family: var(--accent);
+    margin: 0;
+    padding-bottom: 10px;
+    transition: 0.2s ease-in-out;
+
+    @media screen and (min-width: $break-to-tablet) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding-bottom: 15px;
+    }
+
+    @media screen and (min-width: $break-to-desktop) {
+      grid-column-end: 4;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+
+  button {
+    border: none;
+    color: var(--red);
+    background: transparent;
+    border-left: 2px solid var(--red);
+    padding: 15px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    // @media screen and (min-width: $break-to-tablet) {
+    //     bottom: 0;
+    // }
+  }
+
+  &__image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: $break-to-desktop) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &__text-wrapper {
+    padding: 20px;
+
+    @media screen and (min-width: $break-to-tablet) {
+      padding: 0 0 0 10px;
+    }
+  }
 }

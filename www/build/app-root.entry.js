@@ -1,6 +1,6 @@
 import { r as registerInstance, h, e as Host } from './index-5ded1fe5.js';
 
-const appRootCss = "main{background:#f0f0f0;height:1000px}footer{background:#fff;color:var(--pure-black);padding:20vh 20px;position:relative}footer h2{font-family:var(--accent);padding:20px 0;color:var(--pure-black);max-width:700px;margin:0 auto}footer p{margin:0 auto}footer a{color:var(--red)}@media screen and (min-width: 426px){footer{padding:20vh 0;margin-top:100px}footer p{margin:0 calc(15% + 4px)}footer h2{margin:0 calc(15% + 4px)}}.developer{position:absolute;left:0;bottom:0}.developer p{font-size:14px;color:#aaa;padding:7px 20px;margin:0 auto}.developer a{color:#aaa}.developer a:hover{color:var(--red);text-decoration:none}";
+const appRootCss = "footer{background:#fff;color:var(--pure-black);padding:20vh 20px;position:relative}footer h2{font-family:var(--accent);padding:20px 0;color:var(--pure-black);max-width:700px;margin:0 auto}footer p{margin:0 auto}footer a{color:var(--red)}@media screen and (min-width: 426px){footer{padding:20vh 0}footer p{margin:0 calc(15% + 4px)}footer h2{margin:0 calc(15% + 4px)}}.developer{position:absolute;left:0;bottom:0}.developer p{font-size:14px;color:#aaa;padding:7px 20px;margin:0 auto}.developer a{color:#aaa}.developer a:hover{color:var(--red);text-decoration:none}";
 
 const AppRoot = class {
   constructor(hostRef) {

@@ -14,10 +14,10 @@ export class AppHome {
             <h1>Olga Golant</h1>
             <span class="role">Architect</span>
             <stencil-route-link url="/#aboutMe">
-              <button title="to the info">About Me</button>
+              <button title="leads to ">About Me</button>
             </stencil-route-link>
             <stencil-route-link url="/work">
-              <button title="to the info">Feature Work</button>
+              <button title="leads to my latest work">Feature Work</button>
             </stencil-route-link>
           </div>
         </header>
@@ -34,6 +34,7 @@ export class AppHome {
             ac felis. Vivamus at diam molestie, viverra metus a, feugiat dui.
           </p>
         </text-section>
+        <work-list-single></work-list-single>
       </div>
     );
   }

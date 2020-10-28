@@ -1,4 +1,6 @@
 import { Component, h } from "@stencil/core";
+import projectsList from "../../assets/projects/projectsList.json";
+import { projectItemInterface } from "../../global/interfaces";
 
 @Component({
   tag: "work-page",
@@ -14,9 +16,20 @@ export class WorkListPage {
             <h1>My Work</h1>
           </div>
         </header>
-        other content in here
-        <work-list-gird></work-list-gird>
-        <slot></slot>
+        <main>
+        {(projectsList as projectItemInterface[]).map((post) => {
+          console.log(post.shortDescription, post.title, post.img);
+          return (
+            <stencil-route-link url={post.url}>
+              <work-list-gird
+                description={post.shortDescription}
+                heading={post.title}
+                background={post.img}
+              ></work-list-gird>
+            </stencil-route-link>
+          );
+        })}
+        </main>
       </div>
     );
   }
