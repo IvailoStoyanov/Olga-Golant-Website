@@ -8,6 +8,7 @@
   Any global CSS variables should also be applied here.
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 :root {
   --light-black: #212121;
   --pure-black: #000000;
@@ -29,6 +30,78 @@ body {
   font-family: var(--main), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--accent);
   margin: 0;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+header {
+  color: var(--white);
+}
+
+p {
+  margin: 0 0 18px 0;
+  line-height: 1.58;
+  font-size: 18px;
+}
+
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+:root {
+  --light-black: #212121;
+  --pure-black: #000000;
+  --white: #ffffff;
+  --dirty-white: #fafafa;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --black-tint: rgba(33, 33, 33, 0.85);
+  --red: #ff0022;
+}
+
+:root {
+  --main: "Open Sans", sans-serif;
+  --accent: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--main), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--accent);
+  margin: 0;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+header {
+  color: var(--white);
+}
+
+p {
+  margin: 0 0 18px 0;
+  line-height: 1.58;
+  font-size: 18px;
 }

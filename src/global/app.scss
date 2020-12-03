@@ -8,7 +8,6 @@
   Any global CSS variables should also be applied here.
 */
 
-// @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import "./colors.scss";
 @import "./fonts.scss";
 
@@ -20,6 +19,25 @@ body {
     "Segoe UI Symbol";
 }
 
-h1 {
-margin: 0;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--accent);
+  margin: 0;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+header {
+  color: var(--white);
+}
+
+p {
+  margin: 0 0 18px 0;
+  line-height: 1.58;
+  font-size: 18px;
 }

@@ -1,12 +1,24 @@
-export interface projectItemInterface {
-    title: string;
-    date: string;
-    url: string;
-    author: string;
-    twitter: string;
-    shortDescription: string;
-    longDescription: string;
-    img: any;
-    imgAlt: string;
-    filePath?: string;
-  }
+export interface ProjectItemInterface {
+  title: string;
+  url: string;
+  shortDescription: string;
+  longDescription: string;
+  titleDescription: string;
+  img: string;
+  allImages: ImagesArrayInterface[];
+}
+
+export interface ImagesArrayInterface {
+  url: string;
+  alt: string;
+}
+
+export interface Test {
+  title: string;
+  url: string;
+  shortDescription: string;
+  longDescription: string;
+  titleDescription: string;
+  img: string;
+  allImages: ImagesArrayInterface[];
+}

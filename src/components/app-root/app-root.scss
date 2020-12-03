@@ -1,24 +1,5 @@
 @import "../../global/breakpoints.scss";
 
-header {
-  // color: white;
-  // height: 56px;
-  // display: flex;
-  // align-items: center;
-  // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-
-h1 {
-  // font-size: 1.4rem;
-  // font-weight: 500;
-  // color: #fff;
-  // padding: 0 12px;
-}
-
-main {
-  // background: #f0f0f0;
-}
-
 footer {
   background: #fff;
   color: var(--pure-black);
@@ -26,15 +7,9 @@ footer {
   position: relative;
 
   h2 {
-    font-family: var(--accent);
     padding: 20px 0;
     color: var(--pure-black);
     max-width: 700px;
-    margin: 0 auto;
-  }
-
-  p {
-    margin: 0 auto;
   }
 
   a {
@@ -42,15 +17,7 @@ footer {
   }
 
   @media screen and (min-width: $break-to-tablet) {
-    padding: 20vh 0;
-    
-    p {
-      margin: 0 calc(15% + 4px);
-    }
-
-    h2 {
-      margin: 0 calc(15% + 4px);
-    }
+    padding: 20vh calc(15% + 4px);
   }
 }
 
@@ -73,5 +40,18 @@ footer {
       color: var(--red);
       text-decoration: none;
     }
+  }
+}
+
+.skipLink {
+  position: fixed;
+  top: -30em;
+  background: none;
+  border: none;
+  color: var(--red);
+  font-size: 16px;
+
+  &:focus {
+    top: 0;
   }
 }

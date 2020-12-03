@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { LocationSegments } from "@stencil/router";
+import { ImagesArrayInterface, ProjectItemInterface } from "./global/interfaces";
 export namespace Components {
     interface AppHome {
     }
@@ -14,10 +15,8 @@ export namespace Components {
     interface BreadcrumbNav {
         "location": LocationSegments;
     }
-    interface BreadcrumbNavItem {
-        "link": string;
-    }
     interface MainNavigation {
+        "scrollToElement"?: HTMLElement;
     }
     interface TextSection {
     }
@@ -28,9 +27,16 @@ export namespace Components {
     }
     interface WorkListSingle {
     }
+    interface WorkOtherProjects {
+        "data"?: ProjectItemInterface[];
+    }
     interface WorkPage {
     }
     interface WorkProject {
+        "page"?: string;
+    }
+    interface WorkProjectGrid {
+        "imagesUrl"?: ImagesArrayInterface[];
     }
 }
 declare global {
@@ -51,12 +57,6 @@ declare global {
     var HTMLBreadcrumbNavElement: {
         prototype: HTMLBreadcrumbNavElement;
         new (): HTMLBreadcrumbNavElement;
-    };
-    interface HTMLBreadcrumbNavItemElement extends Components.BreadcrumbNavItem, HTMLStencilElement {
-    }
-    var HTMLBreadcrumbNavItemElement: {
-        prototype: HTMLBreadcrumbNavItemElement;
-        new (): HTMLBreadcrumbNavItemElement;
     };
     interface HTMLMainNavigationElement extends Components.MainNavigation, HTMLStencilElement {
     }
@@ -82,6 +82,12 @@ declare global {
         prototype: HTMLWorkListSingleElement;
         new (): HTMLWorkListSingleElement;
     };
+    interface HTMLWorkOtherProjectsElement extends Components.WorkOtherProjects, HTMLStencilElement {
+    }
+    var HTMLWorkOtherProjectsElement: {
+        prototype: HTMLWorkOtherProjectsElement;
+        new (): HTMLWorkOtherProjectsElement;
+    };
     interface HTMLWorkPageElement extends Components.WorkPage, HTMLStencilElement {
     }
     var HTMLWorkPageElement: {
@@ -94,17 +100,24 @@ declare global {
         prototype: HTMLWorkProjectElement;
         new (): HTMLWorkProjectElement;
     };
+    interface HTMLWorkProjectGridElement extends Components.WorkProjectGrid, HTMLStencilElement {
+    }
+    var HTMLWorkProjectGridElement: {
+        prototype: HTMLWorkProjectGridElement;
+        new (): HTMLWorkProjectGridElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
         "breadcrumb-nav": HTMLBreadcrumbNavElement;
-        "breadcrumb-nav-item": HTMLBreadcrumbNavItemElement;
         "main-navigation": HTMLMainNavigationElement;
         "text-section": HTMLTextSectionElement;
         "work-list-gird": HTMLWorkListGirdElement;
         "work-list-single": HTMLWorkListSingleElement;
+        "work-other-projects": HTMLWorkOtherProjectsElement;
         "work-page": HTMLWorkPageElement;
         "work-project": HTMLWorkProjectElement;
+        "work-project-grid": HTMLWorkProjectGridElement;
     }
 }
 declare namespace LocalJSX {
@@ -115,10 +128,8 @@ declare namespace LocalJSX {
     interface BreadcrumbNav {
         "location"?: LocationSegments;
     }
-    interface BreadcrumbNavItem {
-        "link"?: string;
-    }
     interface MainNavigation {
+        "scrollToElement"?: HTMLElement;
     }
     interface TextSection {
     }
@@ -129,21 +140,29 @@ declare namespace LocalJSX {
     }
     interface WorkListSingle {
     }
+    interface WorkOtherProjects {
+        "data"?: ProjectItemInterface[];
+    }
     interface WorkPage {
     }
     interface WorkProject {
+        "page"?: string;
+    }
+    interface WorkProjectGrid {
+        "imagesUrl"?: ImagesArrayInterface[];
     }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-root": AppRoot;
         "breadcrumb-nav": BreadcrumbNav;
-        "breadcrumb-nav-item": BreadcrumbNavItem;
         "main-navigation": MainNavigation;
         "text-section": TextSection;
         "work-list-gird": WorkListGird;
         "work-list-single": WorkListSingle;
+        "work-other-projects": WorkOtherProjects;
         "work-page": WorkPage;
         "work-project": WorkProject;
+        "work-project-grid": WorkProjectGrid;
     }
 }
 export { LocalJSX as JSX };
@@ -153,13 +172,14 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "breadcrumb-nav": LocalJSX.BreadcrumbNav & JSXBase.HTMLAttributes<HTMLBreadcrumbNavElement>;
-            "breadcrumb-nav-item": LocalJSX.BreadcrumbNavItem & JSXBase.HTMLAttributes<HTMLBreadcrumbNavItemElement>;
             "main-navigation": LocalJSX.MainNavigation & JSXBase.HTMLAttributes<HTMLMainNavigationElement>;
             "text-section": LocalJSX.TextSection & JSXBase.HTMLAttributes<HTMLTextSectionElement>;
             "work-list-gird": LocalJSX.WorkListGird & JSXBase.HTMLAttributes<HTMLWorkListGirdElement>;
             "work-list-single": LocalJSX.WorkListSingle & JSXBase.HTMLAttributes<HTMLWorkListSingleElement>;
+            "work-other-projects": LocalJSX.WorkOtherProjects & JSXBase.HTMLAttributes<HTMLWorkOtherProjectsElement>;
             "work-page": LocalJSX.WorkPage & JSXBase.HTMLAttributes<HTMLWorkPageElement>;
             "work-project": LocalJSX.WorkProject & JSXBase.HTMLAttributes<HTMLWorkProjectElement>;
+            "work-project-grid": LocalJSX.WorkProjectGrid & JSXBase.HTMLAttributes<HTMLWorkProjectGridElement>;
         }
     }
 }

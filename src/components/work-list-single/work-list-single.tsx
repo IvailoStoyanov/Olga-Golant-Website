@@ -1,6 +1,6 @@
 import { Component, h } from "@stencil/core";
 import projectsList from "../../assets/projects/projectsList.json";
-import { projectItemInterface } from "../../global/interfaces";
+import { ProjectItemInterface } from "../../global/interfaces";
 
 @Component({
   tag: "work-list-single",
@@ -25,7 +25,7 @@ export class WorkListSingle {
         class="project-items-wrapper"
         ref={(el) => (this.projectItemsWrapperElement = el as HTMLDivElement)}
       >
-        {(projectsList as projectItemInterface[]).map((post, index) => {
+        {(projectsList as ProjectItemInterface[]).map((post, index) => {
           if (index <= 2) {
             return (
               <stencil-route-link url={post.url}>

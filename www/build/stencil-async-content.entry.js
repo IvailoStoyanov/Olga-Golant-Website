@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './index-5ded1fe5.js';
+import { r as registerInstance, h } from './index-a43a2740.js';
 
 const AsyncContent = class {
   constructor(hostRef) {

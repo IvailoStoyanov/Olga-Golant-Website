@@ -1,4 +1,5 @@
 import { Component, h } from "@stencil/core";
+import { scrollToDesiredLocation } from "../../global/defaultFunction";
 
 @Component({
   tag: "app-home",
@@ -6,6 +7,8 @@ import { Component, h } from "@stencil/core";
   shadow: true,
 })
 export class AppHome {
+  public content?: HTMLElement;
+
   render() {
     return (
       <div class="app-home">
@@ -13,16 +16,25 @@ export class AppHome {
           <div class="app-home__hero-container">
             <h1>Olga Golant</h1>
             <span class="role">Architect</span>
-            <stencil-route-link url="/#aboutMe">
-              <button title="leads to ">About Me</button>
-            </stencil-route-link>
-            <stencil-route-link url="/work">
-              <button title="leads to my latest work">Feature Work</button>
+            <button
+              title="leads to about me section"
+              onClick={() => scrollToDesiredLocation(this.content)}
+              class="app-home__hero-button"
+            >
+              About Me
+            </button>
+            <stencil-route-link url="/work" title="leads to my latest work">
+              <button class="app-home__hero-button">
+                Feature Work
+              </button>
             </stencil-route-link>
           </div>
         </header>
 
-        <text-section>
+        <text-section
+          id="content"
+          ref={(el) => (this.content = el as HTMLElement)}
+        >
           <h2>About me</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel

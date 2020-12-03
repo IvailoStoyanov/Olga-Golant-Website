@@ -1,4 +1,5 @@
-import { Component, Listen, Host, h } from "@stencil/core";
+import { Component, Prop, Listen, Host, h } from "@stencil/core";
+import { scrollToDesiredLocation } from "../../global/defaultFunction";
 
 @Component({
   tag: "main-navigation",
@@ -6,32 +7,24 @@ import { Component, Listen, Host, h } from "@stencil/core";
   shadow: true,
 })
 export class MainNavigation {
+  @Prop() scrollToElement?: HTMLElement;
   private navigation?: HTMLMainNavigationElement;
-
-  addScrolledClass() {
-    this.navigation.classList.add("scrolled");
-  }
-
-  removeScrolledClass() {
-    this.navigation.classList.remove("scrolled");
-  }
 
   @Listen("scroll", { target: "window" })
   handleScroll(e) {
     if (e.path[1].scrollY > 100) {
-      this.addScrolledClass();
+      addScrolledClass(this.navigation);
     } else {
-      this.removeScrolledClass();
+      removeScrolledClass(this.navigation);
     }
   }
 
   render() {
     return (
-      
       <Host>
         <nav
-          ref={(el) => (this.navigation = el as HTMLMainNavigationElement)}
           id="navigation"
+          ref={(el) => (this.navigation = el as HTMLMainNavigationElement)}
         >
           <ul>
             <li>
@@ -40,7 +33,7 @@ export class MainNavigation {
               </stencil-route-link>
             </li>
             <li>
-              <stencil-route-link class="hydrated" url="/">
+              <stencil-route-link class="hydrated" url="/" activeClass="active">
                 Home
               </stencil-route-link>
             </li>
@@ -49,28 +42,31 @@ export class MainNavigation {
                 class="hydrated"
                 url="/work"
                 title="view my work"
+                activeClass="active"
               >
                 Work
               </stencil-route-link>
             </li>
             <li>
-              <stencil-route-link
-                class="hydrated"
-                url="/"
-                title="read more about me"
+              <button
+                class="scrollToLink"
+                title="lead to contact information"
+                onClick={() => scrollToDesiredLocation(this.scrollToElement)}
               >
-                About
-              </stencil-route-link>
-            </li>
-            <li>
-              <stencil-route-link class="hydrated" url="#contactMe">
                 Contact
-              </stencil-route-link>
+              </button>
             </li>
           </ul>
         </nav>
-        <slot></slot>
       </Host>
     );
   }
 }
+
+const addScrolledClass = (nav) => {
+  nav.classList.add("scrolled");
+};
+
+const removeScrolledClass = (nav) => {
+  nav.classList.remove("scrolled");
+};
