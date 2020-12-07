@@ -1,6 +1,6 @@
 import { Component, h, Host } from "@stencil/core";
 import { scrollToDesiredLocation } from "../../global/defaultFunction";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 // Redirect, Route, Switch,  are part of the top import! react-router-dom
 
 // routs
