@@ -2,7 +2,7 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import Head from "next/head";
-import ProjectImagesGrid from "../../components/ProjectImagesGird"
+import ProjectImagesGrid from "../../components/project-images-grid/ProjectImagesGird"
 
 
 const Post = ({ contents }) => {

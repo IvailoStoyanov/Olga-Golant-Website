@@ -1,6 +1,6 @@
-import {ImageData, ProjectData} from "../interfaces/interfaces";
+import {ImageData, ProjectDataInterface} from "../../interfaces/interfaces";
 
-function ProjectImagesGrid(props: ProjectData) {
+function ProjectImagesGrid(props: ProjectDataInterface) {
 
   return (
     <div className="images-grid">

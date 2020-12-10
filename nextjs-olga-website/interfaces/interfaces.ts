@@ -1,13 +1,18 @@
+
 export default interface WorkPageProps {
     slugs: []
 }
 
-export  interface ImageData {
+export interface AllProjectsDataInterface {
+    projectsData: [];
+}
+
+export interface ImageData {
     url: string,
     alt: string
 }
 
-export  interface ProjectData {
+export interface ProjectDataInterface {
     title: string,
     url: string,
     titleDescription: string,

@@ -3,7 +3,6 @@ import Link from "next/link";
 import fs from "fs";
 import WorkPageProps from "../../interfaces/interfaces";
 
-//destructure to not use slugs.slugs!
 export default function Projects(props: WorkPageProps) {
   const { slugs } = props;
 
@@ -14,11 +13,12 @@ export default function Projects(props: WorkPageProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <h1>My Work</h1>
         {slugs.map((slug: string) => {
           return (
             <div key={slug}>
-              <Link href={"/project/" + slug}>
-                <a>{"/project/" + slug}</a>
+              <Link href={"/projects/" + slug}>
+                <a>{"/projects/" + slug}</a>
               </Link>
             </div>
           );
@@ -41,7 +41,7 @@ export default function Projects(props: WorkPageProps) {
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync("projectsData");
-  
+
   return {
     props: {
       slugs: files.map((filename) => filename.replace(".json", "")),
