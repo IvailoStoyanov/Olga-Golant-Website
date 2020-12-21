@@ -1,6 +1,7 @@
 
 export default interface WorkPageProps {
-    slugs: []
+    slugs: [],
+    projectsData: []
 }
 
 export interface AllProjectsDataInterface {

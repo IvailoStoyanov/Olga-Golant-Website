@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import fs, { PathLike } from "fs";
+import fs from "fs";
 import HomeProjectBanners from "../components/home-project-banners/HomeProjectBanners";
-import { TextSection } from "../components/TextSection";
+import TextSection from "../components/text-section/TextSection";
 import { AllProjectsDataInterface } from "../interfaces/interfaces";
+import styles from "../styles/HeaderHome.module.scss";
 
 export default function Home(props: AllProjectsDataInterface) {
   const { projectsData } = props;
@@ -11,24 +12,27 @@ export default function Home(props: AllProjectsDataInterface) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Olga Golant | Portfolio site | Architect | Projects | Varna, Bulgaria</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Olga Golant - Architect Portfolio. An experienced and passionate Architecture graduate student from Varna Free University “Chernorizetss Hrabur” - available for hiring" />
+        <meta name="keywords" content="Olga Golant portfolio, Goland, Architect, Varna, portfolio, graduate, Chernorizetss Hrabur, projects, Business building, Residential building, Sports Center, Architecture, construction of buildings, design of buildings, buildings, plans, plan, site, experienced, Olga, Golant, about me, contact me,Olga Golant contact details, details" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <div className="app-home__hero-container">
+      <header className={styles.Header}>
+        <div className={styles.Header_textWrapper}>
           <h1>Olga Golant</h1>
-          <span className="role">Architect</span>
+          <span className={styles.Header_role}>Architect</span>
           <a
             href="/#content"
             title="leads to about me section"
-            className="app-home__hero-button"
+            className={styles.Header_heroButton}
           >
             About Me
           </a>
           <Link href="/projects">
             <a
-              className="app-home__hero-button"
+              className={styles.Header_heroButton}
               title="leads to my latest work"
             >
               Feature Work
@@ -51,9 +55,7 @@ export default function Home(props: AllProjectsDataInterface) {
           </p>
         </TextSection>
 
-        <HomeProjectBanners
-          projectsData={projectsData}
-        ></HomeProjectBanners>
+        <HomeProjectBanners projectsData={projectsData}></HomeProjectBanners>
       </main>
     </>
   );

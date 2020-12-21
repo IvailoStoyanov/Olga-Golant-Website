@@ -2,8 +2,10 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import Head from "next/head";
-import ProjectImagesGrid from "../../components/project-images-grid/ProjectImagesGird"
-
+import Image from "next/image";
+import ProjectImagesGrid from "../../components/project-images-grid/ProjectImagesGird";
+import TextSection from "../../components/text-section/TextSection";
+import styles from "../../styles/HeaderProject.module.scss";
 
 const Post = ({ contents }) => {
   const data = JSON.parse(contents);
@@ -12,24 +14,24 @@ const Post = ({ contents }) => {
     <>
       <Head>
         <title>{data.title}</title>
+        <meta name="description" content={data.titleDescription} />
       </Head>
-      <header>
+
+      <header className={styles.Header}>
         <h1>{data.title}</h1>
         <p>
           A small introduction to the project itself. Aenean vel scelerisque ex.
         </p>
+        <Image src={data.img} alt="Picture of the author" layout="fill"></Image>
       </header>
 
       <main>
-        <div className="text-section">
+        <TextSection>
           <h2>Description</h2>
           <p>{data.longDescription}</p>
-        </div>
+        </TextSection>
 
         <ProjectImagesGrid {...data}></ProjectImagesGrid>
-
-        {/* <pre>{contents}</pre> */}
-        {/* <work-other-projects data={this.otherProjectsData}></work-other-projects> */}
       </main>
     </>
   );

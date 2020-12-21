@@ -1,50 +1,54 @@
 import Head from "next/head";
 import Link from "next/link";
 import fs from "fs";
+import WorkDisplayItem from "../../components/work-display-item/WorkDisplayItem";
 import WorkPageProps from "../../interfaces/interfaces";
+import styles from "./WorkPage.module.scss";
 
 export default function Projects(props: WorkPageProps) {
-  const { slugs } = props;
+  const { projectsData } = props;
 
   return (
-    <div className="container">
+    <>
       <Head>
-        <title>Olga Golant's Work</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Work | Olga Golant | Architect | Portfolio site | Varna, Bulgaria | Business building | Residential building | Sports center </title>
+        <meta name="description" content="Olga Golant Work - Condenced view upon my Business building, Residential building and Sports center projects with a brief description to each including illustrations" />
       </Head>
-      <main>
-        <h1>My Work</h1>
-        {slugs.map((slug: string) => {
+
+      <header className={styles.Header}>
+        <div className={styles.Header_TextContainer}>
+          <h1>My Work</h1>
+        </div>
+      </header>
+
+      <main className={styles.Content}>
+        {projectsData.map((post: string) => {          
+          const data = JSON.parse(post);
+
           return (
-            <div key={slug}>
-              <Link href={"/projects/" + slug}>
-                <a>{"/projects/" + slug}</a>
+            <div key={post}>
+              <Link href={data.url}>
+                <a>
+                  <WorkDisplayItem {...data}></WorkDisplayItem>
+                </a>
               </Link>
             </div>
           );
         })}
       </main>
-
-      <footer id="banana">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync("projectsData");
+  const fileNames = fs.readdirSync("projectsData");
+  const projectsData = fileNames.map((fileName) => {
+    return fs.readFileSync("projectsData/" + fileName, "utf-8");
+  });
 
   return {
     props: {
-      slugs: files.map((filename) => filename.replace(".json", "")),
+      projectsData,
     },
   };
 };

@@ -1,23 +1,13 @@
 import MainNavigation from "./navigation/MainNavigation";
+import TakaE from "./../interfaces/interfaces";
 
-// on component ready
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function (e) {
-//       e.preventDefault();
-
-//       document.querySelector(this.getAttribute('href')).scrollIntoView({
-//           behavior: 'smooth'
-//       });
-//   });
-// });
-
-function Layout(props: any) {
+function Layout(props: { children: "" }) {
   return (
     <div className="page-layout">
-      <a href="#navigation" className="skiplink">
+      <a href="#navigation" className="skipLink">
         skip to nav
       </a>
-      <a href="#content" className="skiplink">
+      <a href="#content" className="skipLink">
         skip to content
       </a>
       <MainNavigation />
@@ -29,6 +19,17 @@ function Layout(props: any) {
           with me via <a href="mailto:olgolant@gmail.com">olgolant@gmail.com</a>{" "}
           or call me on +359 89 593 0121
         </p>
+        <div className="developer">
+          <p>
+            Website built by{" "}
+            <a
+              href="http://www.15082862.webdevmmu.uk/"
+              title="link to the developer of this website - Ivaylo Stoyanov"
+            >
+              Ivaylo Stoyanov
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   );
