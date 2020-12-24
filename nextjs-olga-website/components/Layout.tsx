@@ -1,7 +1,7 @@
 import MainNavigation from "./navigation/MainNavigation";
 import TakaE from "./../interfaces/interfaces";
 
-function Layout(props: { children: "" }) {
+function Layout(props: { children: {} }) {
   return (
     <div className="page-layout">
       <a href="#navigation" className="skipLink">
@@ -17,7 +17,7 @@ function Layout(props: { children: "" }) {
         <p>
           If you want to hire me or to collaborate on a project, get in touch
           with me via <a href="mailto:olgolant@gmail.com">olgolant@gmail.com</a>{" "}
-          or call me on +359 89 593 0121
+          or call me on +44 7733123925
         </p>
         <div className="developer">
           <p>

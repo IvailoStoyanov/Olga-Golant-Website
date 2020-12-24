@@ -2,7 +2,7 @@ import styles from "./WorkDisplayItem.module.scss";
 import Image from "next/image";
 import ProjectDataInterface from "../../interfaces/interfaces"
 
-function WorkDisplayItem(props: ProjectDataInterface) {
+function WorkDisplayItem(props: any) {
   return (
     <div className={styles.WorkDisplayItem}>
       <h3>{props.title}</h3>

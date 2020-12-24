@@ -11,8 +11,6 @@
     position: relative;
     text-decoration: none;
     color: #fff;
-    background-position: center;
-    background-size: cover;
     background-color: #333;
     cursor: pointer;
 
@@ -30,11 +28,14 @@
 
     @media screen and (min-width: $break-to-desktop) {
       background-size: 100%;
-      transition: 3s linear;
 
       &:hover {
         background-size: 120%;
-        transition: 7s linear;
+
+        img {
+          transition: 6s linear;
+          transform: scale3d(1.06, 1.05, 1);
+        }
 
         .ProjectItemsWrapper_projectButton {
           background: #fff;
@@ -45,6 +46,7 @@
 
     img {
       object-fit: cover;
+      transition: 2s linear;
     }
   }
 
