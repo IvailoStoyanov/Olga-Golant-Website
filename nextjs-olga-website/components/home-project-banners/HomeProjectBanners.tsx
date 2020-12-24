@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { AllProjectsDataInterface } from "../../interfaces/interfaces";
+import WorkPageProps from "../../interfaces/interfaces";
 import styles from "./HomeProjectBanner.module.scss";
 
-function HomeProjectBanners(props: AllProjectsDataInterface) {
+function HomeProjectBanners(props: WorkPageProps) {
   const dataArray = props.projectsData;
 
   return (

@@ -4,10 +4,10 @@ import Image from "next/image";
 import fs from "fs";
 import HomeProjectBanners from "../components/home-project-banners/HomeProjectBanners";
 import TextSection from "../components/text-section/TextSection";
-import { AllProjectsDataInterface } from "../interfaces/interfaces";
+import WorkPageProps from "../interfaces/interfaces";
 import styles from "../styles/HeaderHome.module.scss";
 
-export default function Home(props: AllProjectsDataInterface) {
+export default function Home(props: WorkPageProps) {
   const { projectsData } = props;
 
   return (
@@ -51,7 +51,7 @@ export default function Home(props: AllProjectsDataInterface) {
       </header>
 
       <main id="content">
-        <TextSection>
+        <TextSection hasImage>
           <Image
             src="/olga.jpg"
             alt="Picture of Olga"
@@ -73,7 +73,6 @@ export default function Home(props: AllProjectsDataInterface) {
             </p>
           </div>
         </TextSection>
-
         <HomeProjectBanners projectsData={projectsData}></HomeProjectBanners>
       </main>
     </>

@@ -19,16 +19,8 @@
     font-size: 18px;
   }
 
-  //fix sthis
-  div:nth-child(1) {
-    margin: 0 auto !important;
-  }
-
   @media screen and (min-width: $break-to-desktop) {
     padding: 30vh calc(15% + 4px);
-
-    display: flex;
-    flex-flow: row-reverse;
 
     h2 {
       padding-top: 20px 0;
@@ -37,8 +29,18 @@
     p {
       padding-right: 40px;
     }
+  }
 
-    //fix sthis
+  &___hasImage {
+    div:nth-child(1) {
+      margin: 0 auto !important;
+    }
+
+    @media screen and (min-width: $break-to-desktop) {
+      display: flex;
+      flex-flow: row-reverse;
+    }
+
     div:nth-child(1) {
       margin: auto !important;
     }
