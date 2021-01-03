@@ -1,0 +1,81 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+@import "../../styles/brekpoints.scss";
+
+.ProjectItemsWrapper {
+  display: grid;
+  grid-template-rows: 48vh 48vh 48vh;
+
+  &_projectItem {
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgb(0, 0, 0, 0.7)
+      );
+    }
+
+    @media screen and (min-width: $break-to-desktop) {
+      background-size: 100%;
+
+      &:hover {
+        background-size: 120%;
+
+        img {
+          transition: 6s linear;
+          transform: scale3d(1.06, 1.05, 1);
+        }
+
+        .ProjectItemsWrapper_projectButton {
+          background: #fff;
+          color: $pure-black;
+        }
+      }
+    }
+
+    img {
+      object-fit: cover;
+      transition: 2s linear;
+    }
+  }
+
+  &_textContainer {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    z-index: 1;
+
+    h4 {
+      font-size: 20px;
+      padding: 10px 0px;
+      padding-bottom: 30px;
+    }
+
+    @media screen and (min-width: $break-to-tablet) {
+      left: 15%;
+      bottom: 80px;
+
+      h4 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &_projectButton {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    transition: 0.2s ease-in-out;
+    font-family: $main;
+  }
+}

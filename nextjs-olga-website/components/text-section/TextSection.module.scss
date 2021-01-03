@@ -1,0 +1,48 @@
+@import "../../styles/colors.scss";
+@import "../../styles/brekpoints.scss";
+
+.TextSection {
+  display: grid;
+  padding: 40px 20px 20vh 20px;
+  font-size: 21px;
+  background: $light-black;
+  color: $white;
+
+  h2 {
+    max-width: 700px;
+    padding: 40px 0 20px 0px;
+  }
+
+  p {
+    max-width: 700px;
+    line-height: 1.58;
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $break-to-desktop) {
+    padding: 30vh calc(15% + 4px);
+
+    h2 {
+      padding-top: 20px 0;
+    }
+
+    p {
+      padding-right: 40px;
+    }
+  }
+
+  &___hasImage {
+    div:nth-child(1) {
+      margin: 0 auto !important;
+    }
+
+    @media screen and (min-width: $break-to-desktop) {
+      display: flex;
+      flex-flow: row-reverse;
+    }
+
+    div:nth-child(1) {
+      margin: auto !important;
+    }
+  }
+}

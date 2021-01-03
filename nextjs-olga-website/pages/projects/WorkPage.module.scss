@@ -1,0 +1,27 @@
+@import "../../styles/brekpoints.scss";
+@import "../../styles/colors.scss";
+
+.Header {
+  &_TextContainer {
+    padding: 15vh 20px 10vh 20px;
+    height: auto;
+    background: $light-black;
+    color: $white;
+
+    @media screen and (min-width: $break-to-tablet) {
+      padding: 15vh 0 10vh calc(15% + 4px);
+    }
+  }
+}
+
+.Content {
+  @media screen and (min-width: $break-to-desktop) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: $pure-black;
+  }
+}

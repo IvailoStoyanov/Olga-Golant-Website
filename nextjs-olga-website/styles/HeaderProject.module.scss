@@ -1,0 +1,40 @@
+@import "./brekpoints.scss";
+@import "./colors.scss";
+
+.Header {
+  height: auto;
+  position: relative;
+  padding: 25vh 20px;
+  text-shadow: 1px 1px $pure-black;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5)
+  );
+
+  h1 {
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    padding: 0 20px 20px 0;
+  }
+
+  @media screen and (min-width: $break-to-tablet) {
+    padding: 20vh 0 0 15%;
+    height: 30vh;
+  }
+  @media screen and (min-width: $break-to-desktop) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  div {
+    z-index: -1;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
