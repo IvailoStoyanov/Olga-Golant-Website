@@ -22,6 +22,7 @@
     h1 {
       margin-bottom: 5px;
       font-size: 2.8rem;
+      font-weight: 500;
       position: relative;
       animation: appear-left 1.3s ease 0.5s;
       animation-fill-mode: forwards;
@@ -48,7 +49,7 @@
   &_role {
     margin: 0 0 40px 4px;
     display: block;
-    font-family: $accent;
+    font-family: $main;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 1px;
