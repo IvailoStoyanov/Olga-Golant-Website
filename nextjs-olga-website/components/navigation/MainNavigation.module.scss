@@ -52,6 +52,7 @@
       text-decoration: none;
       color: $white;
       cursor: pointer;
+      opacity: 0;
       transition: 0.3s ease-in-out;
 
       @media screen and (min-width: $break-to-tablet) {
