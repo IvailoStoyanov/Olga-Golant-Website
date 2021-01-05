@@ -39,6 +39,7 @@ class MainNavigation extends React.Component<{}, { isScrolled: boolean }> {
           this.state.isScrolled ? styles.Navigation___scrolled : ""
         }`}
         ref={this.mainNavigation}
+        style={{opacity: 0}}
       >
         <ul>
           <li>
