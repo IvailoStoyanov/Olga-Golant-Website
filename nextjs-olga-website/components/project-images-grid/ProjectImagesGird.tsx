@@ -8,7 +8,7 @@ function ProjectImagesGrid(props: ProjectDataInterface) {
       {(props.allImages as []).map((image: ImageData, index) => {
         if (index <= 3) {
           return (
-            <div className={styles.ImagesGrid_big} key={index}>
+            <div className={styles.ImagesGrid___big} key={index}>
               <Image
                 src={image.url}
                 alt={image.alt}
