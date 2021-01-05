@@ -36,6 +36,7 @@ export default function Home(props: WorkPageProps) {
             href="/#content"
             title="leads to about me section"
             className={styles.Header_heroButton}
+            style={{opacity: 0}}
           >
             About Me
           </a>
