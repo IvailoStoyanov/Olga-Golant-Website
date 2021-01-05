@@ -44,6 +44,7 @@ export default function Home(props: WorkPageProps) {
             <a
               className={styles.Header_heroButton}
               title="leads to my latest work"
+              style={{opacity: 0}}
             >
               Feature Work
             </a>

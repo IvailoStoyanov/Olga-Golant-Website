@@ -1,6 +1,7 @@
 @import "../../styles/colors.scss";
 @import "../../styles/fonts.scss";
 @import "../../styles/brekpoints.scss";
+@import "../../styles/animations.scss";
 
 .Navigation {
   position: fixed;
@@ -9,6 +10,8 @@
   font-family: $accent;
   font-weight: 500;
   transition: 0.5s ease-in-out;
+  opacity: 0;
+  animation: appear 1.3s ease 1.3s forwards;
   z-index: 3;
 
   ul {
