@@ -11,8 +11,8 @@ class MainNavigation extends React.Component<{}, { isScrolled: boolean }> {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  handleScroll(e: any) {
-    if (e.path[1].scrollY > 100) {
+  handleScroll() {
+    if (window.pageYOffset > 100) {
       this.setState(() => ({
         isScrolled: true,
       }));
@@ -39,6 +39,7 @@ class MainNavigation extends React.Component<{}, { isScrolled: boolean }> {
           this.state.isScrolled ? styles.Navigation___scrolled : ""
         }`}
         ref={this.mainNavigation}
+        style={{opacity: 0}}
       >
         <ul>
           <li>

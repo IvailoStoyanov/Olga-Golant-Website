@@ -22,9 +22,9 @@
     h1 {
       margin-bottom: 5px;
       font-size: 2.8rem;
+      font-weight: 500;
       position: relative;
-      animation: appear-left 1.3s ease 0.5s;
-      animation-fill-mode: forwards;
+      animation: appear-left 1.3s ease 0.5s forwards;
       opacity: 0;
     }
 
@@ -48,13 +48,12 @@
   &_role {
     margin: 0 0 40px 4px;
     display: block;
-    font-family: $accent;
+    font-family: $main;
     font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    animation: appear-left 1.3s ease 1.3s;
-    animation-fill-mode: forwards;
+    font-weight: 600;
+    letter-spacing: 2px;
     opacity: 0;
+    animation: appear-left 1.3s ease 1.3s forwards;
 
     @media screen and (min-width: $break-to-tablet) {
       font-size: 1.5rem;
@@ -70,12 +69,12 @@
     color: $white;
     background: rgba(0, 0, 0, 0.7);
     font-family: $accent;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 16px;
     text-decoration: none;
     transition: 0.4s ease-in-out;
-    animation: appear-bottom 1.1s linear 2s forwards;
     opacity: 0;
+    animation: appear-bottom 1.1s linear 2s forwards;
     z-index: 2;
 
     &:hover {
