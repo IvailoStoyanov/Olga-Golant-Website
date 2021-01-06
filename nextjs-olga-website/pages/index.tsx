@@ -26,9 +26,8 @@ export default function Home(props: WorkPageProps) {
           content="Olga Golant portfolio, Goland, Architect, Varna, portfolio, graduate, Chernorizetss Hrabur, projects, Business building, Residential building, Sports Center, Architecture, construction of buildings, design of buildings, buildings, plans, plan, site, experienced, Olga, Golant, about me, contact me,Olga Golant contact details, details"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="google-site-verification" content="fln9VfeeAuSnxPGwJxeMmOa7hcmuK1tvrGPBY0j_a-s" />
+        <meta name="google-site-verification" content="B2D8GVkpmVGhpcm5ebmk7kwWaDSZj8CNEhp7ZgU0kt0" />
       </Head>
-
       <header className={styles.Header}>
         <div className={styles.Header_textWrapper}>
           <h1>Olga Golant</h1>
