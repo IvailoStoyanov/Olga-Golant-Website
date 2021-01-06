@@ -1,1 +1,1 @@
-The website has been migrated to https://olga-golant.vercel.app/
+The website has been migrated to [a link](https://olga-golant.vercel.app/)
