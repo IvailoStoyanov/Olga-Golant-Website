@@ -3,29 +3,41 @@
   "url": "/projects/business-hotel",
   "titleDescription": "Business Hotel | Olga Golant | Architect | Visualizations | Graphics | Portfolio site | Varna, Bulgaria",
   "shortDescription": "The Business Hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”...",
-  "longDescription": "The business hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for good visual connections with the whole city. The mass of the building consists two blocks – short (4 stories) and high (12 stories). They create the buildings’ characteristic silhouette. The short one is occupied by a foyer, restaurant, bar, spa, conferеnce hall, gallery and offices They have an inner green area for leisure time that aims to create a microclimatic. The tall (body) consists of hotel rooms and a panorama bar The hotel has 12 floors with 10 rooms on each floor and excellent view of the city. On the top of it is situated panorama bar. All the storage, technical rooms are in the basement. Car parking is underground on three levels providing 80 parking lots.",
+  "longDescription": [
+    "The site is located in the city Varna between Primmorski Polk and Vasil Levski Blvd in an area populated with residential houses and public buildings. The situation provides very convenient access to public transport facilities.",
+    "The building consists of two blocks- low /4 stories/ and high/ 12 stories/ to create a characteristic silhouette. The lower one hosts several functions - a foyer, a restaurant, SPA, a congress centre for about 300 seats, a gallery, a café, retail areas and office spaces. There is also a so-called 'green area' with trees and seating, which provides an oasis within the city's hectic life. The hotel rooms and panorama bar occupy the higher body with 12 stories with excellent views on each floor.",
+    "All the storage and the technical rooms are in the basement. Car parking is in the underground on three levels providing 80 car parks."
+  ],
   "img": "/images/hotel/main.jpg",
   "alt": "iamge of the outside facade of the building",
   "allImages": [
     {
       "url": "/images/hotel/main.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of outside of the business hotel shown from the hotel garden"
     },
     {
       "url": "/images/hotel/grid-one.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of outside of the business hotel shown from the hotel garden shown through tree leaves"
     },
     {
       "url": "/images/hotel/grid-two.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the hotel from birds eye view showing all the available entrances and exits including the parking entrance"
     },
     {
       "url": "/images/hotel/grid-three.jpg",
-      "alt": "image of the hotel detail facade"
+      "alt": "image of the hotel and it's location relevant to the other major buildings in the city"
     },
     {
       "url": "/images/hotel/grid-four.jpg",
-      "alt": "image of the hotel site analysis"
+      "alt": "image of the hotel layout destructured by floor"
+    },
+    {
+      "url": "/images/hotel/grid-five.jpg",
+      "alt": "image showing the site, view, orthogonal and the green system sketch of the hotel"
+    },
+    {
+      "url": "/images/hotel/grid-six.jpg",
+      "alt": "image of the inside hotel garden"
     }
   ]
 }

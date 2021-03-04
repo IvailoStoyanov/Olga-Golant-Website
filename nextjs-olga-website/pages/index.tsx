@@ -25,8 +25,11 @@ export default function Home(props: WorkPageProps) {
           name="keywords"
           content="Olga Golant portfolio, Goland, Architect, Varna, portfolio, graduate, Chernorizetss Hrabur, projects, Business building, Residential building, Sports Center, Architecture, construction of buildings, design of buildings, buildings, plans, plan, site, experienced, Olga, Golant, about me, contact me,Olga Golant contact details, details"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="google-site-verification" content="B2D8GVkpmVGhpcm5ebmk7kwWaDSZj8CNEhp7ZgU0kt0" />
+        <link rel="icon" href="/logo/logo-mark.svg" />
+        <meta
+          name="google-site-verification"
+          content="B2D8GVkpmVGhpcm5ebmk7kwWaDSZj8CNEhp7ZgU0kt0"
+        />
       </Head>
       <header className={styles.Header}>
         <div className={styles.Header_textWrapper}>
@@ -36,7 +39,7 @@ export default function Home(props: WorkPageProps) {
             href="/#content"
             title="leads to about me section"
             className={styles.Header_heroButton}
-            style={{opacity: 0}}
+            style={{ opacity: 0 }}
           >
             About Me
           </a>
@@ -44,7 +47,7 @@ export default function Home(props: WorkPageProps) {
             <a
               className={styles.Header_heroButton}
               title="leads to my latest work"
-              style={{opacity: 0}}
+              style={{ opacity: 0 }}
             >
               Feature Work
             </a>
@@ -64,14 +67,14 @@ export default function Home(props: WorkPageProps) {
           <div>
             <h2>About Me</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              vel scelerisque ex. Aliquam sit amet ligula sit amet mauris dictum
-              sodales vitae a felis. Aliquam erat volutpat. Proin a condimentum
-              metus. Ut pharetra, ipsum quis vulputate scelerisque, ex dolor
-              ultricies justo, sed accumsan urna mi vitae ex. In hac habitasse
-              platea dictumst. Duis nulla orci, tempus quis suscipit at,
-              facilisis ac felis. Vivamus at diam molestie, viverra metus a,
-              feugiat dui.
+              I am an architectural assistant with less than a year of
+              experience. I have recently completed my Master's degree in
+              architecture at VFU "Chernoriztc Hrabar". I am looking for new
+              opportunities to help me expand my knowledge and grow my career.
+              I have good design and technical detailing skills and I am able
+              to produce a high-quality architectural drawing. I am self-driven
+              and enthusiastic, with excellent team working and communication
+              skills.
             </p>
           </div>
         </TextSection>

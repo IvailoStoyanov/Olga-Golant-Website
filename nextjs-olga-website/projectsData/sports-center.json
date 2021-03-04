@@ -3,29 +3,49 @@
   "url": "/projects/sports-center",
   "titleDescription": "Sports Center | Olga Golant | Architect | Visualizations | Graphics | Portfolio site | Varna, Bulgaria  ",
   "shortDescription": "The Business Hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for...",
-  "longDescription": "The business hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for good visual connections with the whole city. The mass of the building consists two blocks – short (4 stories) and high (12 stories). They create the buildings’ characteristic silhouette. The short one is occupied by a foyer, restaurant, bar, spa, conferеnce hall, gallery and offices They have an inner green area for leisure time that aims to create a microclimatic. The tall (body) consists of hotel rooms and a panorama bar The hotel has 12 floors with 10 rooms on each floor and excellent view of the city. On the top of it is situated panorama bar. All the storage, technical rooms are in the basement. Car parking is underground on three levels providing 80 parking lots.",
+  "longDescription": ["There is a sewer connecting the Black Sea with Lake Varna on the right side of the building. The region is suitable for sports activities. The project aims to combine nature, new technologies, unique lighting opportunities, and organic architecture shapes. The whole idea is inspired by the fact that the building is situated so close to the water but even more because of its lack of this type of buildings. One of the leading sports that will be practised there is swimming.  The building's silhouette elegantly blends in with its surroundings while creating the feeling of the slightly hilly area and a lush sea."],
   "img": "/images/sports-center/main.jpg",
   "alt": "iamge of the outside facade of the building",
   "allImages": [
     {
       "url": "/images/sports-center/main.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the outside courtyard of the sports center full of people"
     },
     {
       "url": "/images/sports-center/grid-one.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the outside courtyard of the sports center full of people doing physical activity"
     },
     {
       "url": "/images/sports-center/grid-two.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the sports center from top down bird eye view where it looks like a coral shape"
     },
     {
       "url": "/images/sports-center/grid-three.jpg",
-      "alt": "image of the hotel detail facade"
+      "alt": "image of the sports center from top down with indications for the entrances to the pool, dorms and staff rooms"
     },
     {
       "url": "/images/sports-center/grid-four.jpg",
-      "alt": "image of the hotel site analysis"
+      "alt": "image of the sports center from far away across the river situated next to the building"
+    },
+    {
+      "url": "/images/sports-center/grid-five.jpg",
+      "alt": "image of the sports center level layout"
+    },
+    {
+      "url": "/images/sports-center/grid-six.jpg",
+      "alt": "image of the indoors basketball court with people playing while natural lighting comes from the windows outside"
+    },
+    {
+      "url": "/images/sports-center/grid-seven.jpg",
+      "alt": "image of the sports center from a birds eye view where you can see the floors of the building"
+    },
+    {
+      "url": "/images/sports-center/grid-eight.jpg",
+      "alt": "image of the layout of the sports center shown though a crosscut"
+    },
+    {
+      "url": "/images/sports-center/grid-nine.jpg",
+      "alt": "image of sports center layout from each angle of the building"
     }
   ]
 }

@@ -7,7 +7,7 @@ function WorkDisplayItem(props: any) {
     <div className={styles.WorkDisplayItem}>
       <h3>{props.title}</h3>
       <div className={styles.WorkDisplayItem_imageWrapper}>
-        <Image src={props.img} alt="Picture of the author" layout="fill"></Image>
+        <Image src={props.img} alt={props.alt} layout="fill"></Image>
       </div>
       <div className={styles.WorkDisplayItem_textWrapper}>
         <p>{props.shortDescription}</p>

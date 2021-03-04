@@ -3,29 +3,66 @@
   "url": "/projects/town-hall",
   "titleDescription": "Town hall | Olga Golant | Architect | Visualizations | Graphics | Portfolio site | Varna, Bulgaria",
   "shortDescription": "The Business Hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for...",
-  "longDescription": "The business hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for good visual connections with the whole city. The mass of the building consists two blocks – short (4 stories) and high (12 stories). They create the buildings’ characteristic silhouette. The short one is occupied by a foyer, restaurant, bar, spa, conferеnce hall, gallery and offices They have an inner green area for leisure time that aims to create a microclimatic. The tall (body) consists of hotel rooms and a panorama bar The hotel has 12 floors with 10 rooms on each floor and excellent view of the city. On the top of it is situated panorama bar. All the storage, technical rooms are in the basement. Car parking is underground on three levels providing 80 parking lots.",
+  "longDescription": [
+    "The building sits at the core of the triangular site framed by 'Slivnica' Blvd and Troleyna Str. The project aims to create a space that can accommodate all the public administration for the particular district, various public events, and provide the building's optimal functionality. Building contribution assumes good connections with city hall and the State Archive.",
+    "The following solutions have sought to achieve the concept and as a result of many types of research:",
+    [
+      "optimal transparency which underlines the democratic character of the Town Hall",
+      "the building evokes clarity, honesty and freedom of expression - values essential to the proper functioning of civil society",
+      "to provide pedestrian access from all sides",
+      "the analysis of existing afforestation on the site determines an area to locate the building due to its geometry and the trees' position."
+    ]
+  ],
   "img": "/images/town-hall/main.jpg",
   "alt": "iamge of the outside facade of the building",
   "allImages": [
     {
       "url": "/images/town-hall/main.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the canopy of the town hall being held by concrete columns"
     },
     {
       "url": "/images/town-hall/grid-one.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the hotel relative to the landscape"
     },
     {
       "url": "/images/town-hall/grid-two.jpg",
-      "alt": "image of the hotel"
+      "alt": "image of the entrances of the building"
     },
     {
       "url": "/images/town-hall/grid-three.jpg",
-      "alt": "image of the hotel detail facade"
+      "alt": "image of the layout of all floors"
     },
     {
       "url": "/images/town-hall/grid-four.jpg",
-      "alt": "image of the hotel site analysis"
+      "alt": "image of the layout of the whole buildign from bird's eye view and an exploded view showcasing the whole structure and the materials used"
+    },
+    {
+      "url": "/images/town-hall/grid-five.jpg",
+      "alt": "image of the back side of the building"
+    },
+    {
+      "url": "/images/town-hall/grid-six.jpg",
+      "alt": "image of section a-a, b-b and c-c shown through a crosscut"
+    },
+    {
+      "url": "/images/town-hall/grid-seven.jpg",
+      "alt": "image of the outside corner of the building"
+    },
+    {
+      "url": "/images/town-hall/grid-eight.jpg",
+      "alt": "image of the sketches of the roof construction, facade construction, windows, foor construction and the foor construction underground"
+    },
+    {
+      "url": "/images/town-hall/grid-nine.jpg",
+      "alt": "image of the south east, north east, north west and south west elevation of the building"
+    },
+    {
+      "url": "/images/town-hall/grid-ten.jpg",
+      "alt": "iamge of the backside facade of the building"
+    },
+    {
+      "url": "/images/town-hall/grid-eleven.jpg",
+      "alt": "image from a human's perspective standing under the canopy of the town hall"
     }
   ]
 }

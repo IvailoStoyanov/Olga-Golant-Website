@@ -1,5 +1,6 @@
 import React, { createRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./MainNavigation.module.scss";
 class MainNavigation extends React.Component<{}, { isScrolled: boolean }> {
   private mainNavigation = createRef<HTMLElement>();
@@ -39,12 +40,19 @@ class MainNavigation extends React.Component<{}, { isScrolled: boolean }> {
           this.state.isScrolled ? styles.Navigation___scrolled : ""
         }`}
         ref={this.mainNavigation}
-        style={{opacity: 0}}
+        style={{ opacity: 0 }}
       >
         <ul>
           <li>
             <Link href="/">
-              <a className={styles.Logo}>O.G</a>
+              <a className={styles.Logo}>
+                <Image
+                  src="/logo/logo-mark-white.svg"
+                  alt="Olga Golant logo mark"
+                  width={30}
+                  height={30}
+                />
+              </a>
             </Link>
           </li>
           <li>

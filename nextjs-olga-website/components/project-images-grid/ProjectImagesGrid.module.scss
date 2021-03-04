@@ -32,6 +32,7 @@
 
     img {
       object-fit: cover;
+      cursor: pointer;
     }
 
     &.ImagesGrid___big {
@@ -42,7 +43,6 @@
       div {
         height: 250px;
       }
-
 
       @media screen and (min-width: $break-to-desktop) {
         &:nth-child(1) {
@@ -59,6 +59,51 @@
           grid-column-end: 4;
         }
       }
+    }
+  }
+}
+
+.overlayWrapper {
+  // enable scroll ?
+
+  // height: 90vh;
+  position: fixed;
+  max-height: 20vh;
+  overflow: hidden;
+  z-index: 11;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $pure-black;
+    opacity: 0.8;
+    // z-index: 10;
+  }
+
+  .overlayClose {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    color: $white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  img {
+    position: fixed;
+    width: 90vw;
+    max-height: 100vh;
+    top: 20vh;
+    left: 5vw;
+    // z-index: 11;
+
+    @media screen and (min-width: $break-to-desktop) {
+      top: 1vh;
+      width: 65vw;
+      left: 17vw;
     }
   }
 }

@@ -15,20 +15,30 @@ const Post = ({ contents }) => {
       <Head>
         <title>{data.title}</title>
         <meta name="description" content={data.titleDescription} />
+        <link rel="icon" href="/logo/logo-mark.svg" />
       </Head>
 
       <header className={styles.Header}>
         <h1>{data.title}</h1>
-        <p>
-          A small introduction to the project itself. Aenean vel scelerisque ex.
-        </p>
-        <Image src={data.img} alt="Picture of the author" layout="fill"></Image>
+        <Image src={data.img} alt={data.alt} layout="fill"></Image>
       </header>
 
       <main>
         <TextSection>
           <h2>Description</h2>
-          <p>{data.longDescription}</p>
+          {data.longDescription.map((paragraph, index) => {
+            if (typeof paragraph === "object") {
+              return (
+                <ul key={index}>
+                  {paragraph.map((listItem, index) => {
+                    return <li key={index}>{listItem}</li>;
+                  })}
+                </ul>
+              );
+            } else {
+              return <p key={index}>{paragraph.toString()}</p>;
+            }
+          })}
         </TextSection>
 
         <ProjectImagesGrid {...data}></ProjectImagesGrid>

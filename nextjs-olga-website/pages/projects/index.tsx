@@ -13,6 +13,7 @@ export default function Projects(props: WorkPageProps) {
       <Head>
         <title>Work | Olga Golant | Architect | Portfolio site | Varna, Bulgaria | Business building | Residential building | Sports center </title>
         <meta name="description" content="Olga Golant Work - Condenced view upon my Business building, Residential building and Sports center projects with a brief description to each including illustrations" />
+        <link rel="icon" href="/logo/logo-mark.svg" />
       </Head>
 
       <header className={styles.Header}>

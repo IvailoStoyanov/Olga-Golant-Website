@@ -8,15 +8,28 @@
   background: $light-black;
   color: $white;
 
-  h2 {
+  h2,
+  p,
+  ul {
     max-width: 700px;
+  }
+
+  h2 {
     padding: 40px 0 20px 0px;
   }
 
   p {
-    max-width: 700px;
     line-height: 1.58;
     font-size: 18px;
+  }
+
+  ul {
+    font-size: 18px;
+    padding-left: 20px;
+
+    li {
+      padding-bottom: 10px;
+    }
   }
 
   @media screen and (min-width: $break-to-desktop) {

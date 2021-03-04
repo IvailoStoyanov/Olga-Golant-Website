@@ -1,5 +1,4 @@
 import MainNavigation from "./navigation/MainNavigation";
-import TakaE from "./../interfaces/interfaces";
 
 function Layout(props: { children: {} }) {
   return (

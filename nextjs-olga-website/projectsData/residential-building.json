@@ -3,29 +3,46 @@
   "url": "/projects/residential-building",
   "titleDescription": "Residential Building | Olga Golant | Architect | Visualizations | Graphics | Portfolio site | Varna, Bulgaria",
   "shortDescription": "The Business Hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for...",
-  "longDescription": "The business hotel is situated in the city Varna between bul. “Primorski Polk” and bul. “Vasil Levski”. The situation of the building predisposes for good visual connections with the whole city. The mass of the building consists two blocks – short (4 stories) and high (12 stories). They create the buildings’ characteristic silhouette. The short one is occupied by a foyer, restaurant, bar, spa, conferеnce hall, gallery and offices They have an inner green area for leisure time that aims to create a microclimatic. The tall (body) consists of hotel rooms and a panorama bar The hotel has 12 floors with 10 rooms on each floor and excellent view of the city. On the top of it is situated panorama bar. All the storage, technical rooms are in the basement. Car parking is underground on three levels providing 80 parking lots.",
-  "img": "/images/residential/main.jpg",
+  "longDescription": [
+    "The residential building is situated in the central area of the city Varna.",
+    "The functions proposed for the ground floor, such as a café with outdoor seating and shops, activate the urban space. Car parking is assured on the underground floor.  The storage spaces for all flats are also on the underground level. All the apartments faced northeast and east direction.",
+    "The apartments created the range in size from 1 to 4 rooms, which have their beautiful green terrace. There are also studio apartments. This project is a conceptual idea to create self-sustainable building stripped away from the chaos of the busy city. At the same time, the building is situated close to essential utilitarian services. The project shows the interest in merging the benefits of single and multi-family buildings with a higher standard of living while creating a relaxing atmosphere and social surroundings."
+
+  ],
+  "img": "/images/residential-building/main.jpg",
   "alt": "iamge of the outside facade of the building",
   "allImages": [
     {
-      "url": "/images/residential/main.jpg",
-      "alt": "image of the hotel"
+      "url": "/images/residential-building/main.jpg",
+      "alt": "image of the corner of the residential building"
     },
     {
-      "url": "/images/residential/grid-one.jpg",
-      "alt": "image of the hotel"
+      "url": "/images/residential-building/grid-one.jpg",
+      "alt": "image of the residential building with the camera looking into the flats through the windows on a sunny day"
     },
     {
-      "url": "/images/residential/grid-two.jpg",
-      "alt": "image of the hotel"
+      "url": "/images/residential-building/grid-two.jpg",
+      "alt": "image of the residential building parking layout and the entrances"
     },
     {
-      "url": "/images/residential/grid-three.jpg",
-      "alt": "image of the hotel detail facade"
+      "url": "/images/residential-building/grid-three.jpg",
+      "alt": "image of the residential building location relevant to the nearby education buildings, public buildings, greenery and transport locations"
     },
     {
-      "url": "/images/residential/grid-four.jpg",
-      "alt": "image of the hotel site analysis"
+      "url": "/images/residential-building/grid-four.jpg",
+      "alt": "image of the building from the view of a walking human standing on the adjacent sidewalk looking towards the windows of the building"
+    },
+    {
+      "url": "/images/residential-building/grid-five.jpg",
+      "alt": "image showing the south and north elevation of the building and a crosscut of the building showing the floors and rooms"
+    },
+    {
+      "url": "/images/residential-building/grid-six.jpg",
+      "alt": "image of the building from the view of a walking human standing on the sidewalk across the street looking towards the windows of the building"
+    },
+    {
+      "url": "/images/residential-building/grid-seven.jpg",
+      "alt": "image of the layout for each floor of the building"
     }
   ]
 }
